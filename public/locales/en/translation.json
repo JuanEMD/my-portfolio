@@ -1,0 +1,98 @@
+{
+  "personalInfo": {
+    "role": "Software Engineer",
+    "description": "Full Stack Developer with a frontend focus and 4 years of experience building scalable web applications. I enjoy creating efficient solutions that simplify processes and deliver great user experiences.",
+    "contactMe": "Contact me"
+  },
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "sections": {
+    "projects": "Projects",
+    "skills": "Skills",
+    "experiences": "Experiences",
+    "education": "Education",
+    "contact": "Contact"
+  },
+  "skills": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Databases",
+      "testing": "Testing",
+      "cloud": "Cloud",
+      "tools": "Tools",
+      "Practices": "Practices"
+    }
+  },
+  "projects": {
+    "medicalDocument": {
+      "title": "Medical Document Processing System",
+      "description": "Developed an internal tool to automate medical document validation workflows, improving operational efficiency for insurance processes."
+    },
+    "travelManagement": {
+      "title": "Internal Travel Management System",
+      "description": "Built a centralized platform to manage corporate travel requests, approvals, and reporting, replacing manual email and spreadsheet-based workflows."
+    },
+    "reportingGenerator": {
+      "title": "Dynamic Data Reporting Generator",
+      "description": "Developed a dynamic reporting tool that enables users with basic database knowledge to generate customized reports across multiple tables and data sources. The platform allows users to create and access reports from any registered database without leaving the application."
+    },
+    "previewText": {
+      "notPublic1": "Internal tool",
+      "notPublic2": "UI Preview Not Public"
+    }
+  },
+  "experiences": {
+    "humano": {
+      "position": "Programmer Analyst II",
+      "description": "Develop and maintain internal business applications by designing and implementing a React and .NET-based solution that automated medical document processing workflows, significantly reducing manual validation time and streamlining internal management processes."
+    },
+    "bitbox": {
+      "position": "Web Developer",
+      "description": "Contributed to the frontend development of an Internal Travel Management System, a centralized platform for handling corporate travel requests, hotel reservations, and transportation options with configurable alternatives per category."
+    }
+  },
+  "education": {
+    "unicaribe": { "title": "Bachelor's Degree in Software Engineering" },
+    "itla": { "title": "Higher Technician in Software Development" },
+    "countryName": "Dominican Republic"
+  },
+  "contact": {
+    "form": {
+      "label": {
+        "firstName": "First Name",
+        "lastName": "Last Name",
+        "email": "Email",
+        "message": "Message",
+        "submit": "Get in touch",
+        "sending": "Sending..."
+      },
+      "placeholder": {
+        "firstName": "Your first name",
+        "lastName": "Your last name",
+        "email": "email@example.com",
+        "message": "Your message"
+      },
+      "validation": {
+        "firstNameRequired": "First name is required.",
+        "lastNameRequired": "Last name is required.",
+        "emailRequired": "Email is required.",
+        "emailInvalid": "Please enter a valid email address.",
+        "messageRequired": "Message is required."
+      },
+      "api": {
+        "success": "Message sent successfully!",
+        "error": "An error occurred while sending your message. Please try again later."
+      }
+    }
+  },
+  "footer": {
+    "description": "2026 | Designed and developed by Juan Marmolejos"
+  }
+}

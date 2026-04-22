@@ -1,0 +1,7 @@
+.carousel--item{
+    flex: 0 0 10em;
+}
+
+.carousel--group {
+    display: flex;
+}

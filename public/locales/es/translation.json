@@ -1,0 +1,98 @@
+{
+  "personalInfo": {
+    "role": "Ingeniero de Software",
+    "description": "Desarrollador Full Stack con enfoque en frontend y 4 años de experiencia construyendo aplicaciones web escalables. Disfruto creando soluciones eficientes que simplifican procesos y brindan excelentes experiencias de usuario.",
+    "contactMe": "Contáctame"
+  },
+  "nav": {
+    "home": "Inicio",
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "experiences": "Experiencias",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "sections": {
+    "projects": "Proyectos",
+    "skills": "Habilidades",
+    "experiences": "Experiencias",
+    "education": "Educación",
+    "contact": "Contacto"
+  },
+  "skills": {
+    "categories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "databases": "Bases de datos",
+      "testing": "Testing",
+      "cloud": "Nube",
+      "tools": "Herramientas",
+      "Practices": "Prácticas"
+    }
+  },
+  "projects": {
+    "medicalDocument": {
+      "title": "Sistema de Procesamiento de Documentos Médicos",
+      "description": "Desarrollé una herramienta interna para automatizar flujos de validación de documentos médicos, mejorando la eficiencia operativa en procesos de seguros."
+    },
+    "travelManagement": {
+      "title": "Sistema Interno de Gestión de Viajes",
+      "description": "Construí una plataforma centralizada para gestionar solicitudes de viajes corporativos, aprobaciones e informes, reemplazando flujos de trabajo manuales basados en correos y hojas de cálculo."
+    },
+    "reportingGenerator": {
+      "title": "Generador Dinámico de Reportes",
+      "description": "Desarrollé una herramienta de reportes dinámica que permite a usuarios con conocimientos básicos de bases de datos generar reportes personalizados de múltiples tablas y fuentes de datos. La plataforma permite crear y acceder a reportes de cualquier base de datos registrada sin salir de la aplicación."
+    },
+    "previewText": {
+      "notPublic1": "Herramienta interna",
+      "notPublic2": "Vista previa no pública"
+    }
+  },
+  "experiences": {
+    "humano": {
+      "position": "Analista Programador II",
+      "description": "Desarrollé y mantuve aplicaciones internas de negocio diseñando e implementando una solución basada en React y .NET que automatizó flujos de procesamiento de documentos médicos, reduciendo significativamente el tiempo de validación manual y optimizando los procesos internos de gestión."
+    },
+    "bitbox": {
+      "position": "Desarrollador Web",
+      "description": "Contribuí al desarrollo frontend de un Sistema Interno de Gestión de Viajes, una plataforma centralizada para gestionar solicitudes de viajes corporativos, reservas de hoteles y opciones de transporte con alternativas configurables por categoría."
+    }
+  },
+  "education": {
+    "unicaribe": { "title": "Licenciatura en Ingeniería de Software" },
+    "itla": { "title": "Técnico Superior en Desarrollo de Software" },
+    "countryName": "República Dominicana"
+  },
+  "contact": {
+    "form": {
+      "label": {
+        "firstName": "Nombre",
+        "lastName": "Apellido",
+        "email": "Correo electrónico",
+        "message": "Mensaje",
+        "submit": "Contactar",
+        "sending": "Enviando..."
+      },
+      "placeholder": {
+        "firstName": "Tu nombre",
+        "lastName": "Tu apellido",
+        "email": "correo@ejemplo.com",
+        "message": "Tu mensaje"
+      },
+      "validation": {
+        "firstNameRequired": "El nombre es requerido.",
+        "lastNameRequired": "El apellido es requerido.",
+        "emailRequired": "El correo electrónico es requerido.",
+        "emailInvalid": "Por favor ingresa un correo electrónico válido.",
+        "messageRequired": "El mensaje es requerido."
+      },
+      "api": {
+        "success": "¡Mensaje enviado con éxito!",
+        "error": "Ocurrió un error al enviar tu mensaje. Por favor, inténtalo de nuevo más tarde."
+      }
+    }
+  },
+  "footer": {
+    "description": "2026 | Diseñado y desarrollado por Juan Marmolejos"
+  }
+}
