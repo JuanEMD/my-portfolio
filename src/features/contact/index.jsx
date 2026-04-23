@@ -5,9 +5,9 @@ const Contact = () => {
     const { handleSubmit, isPending, currentState } = useContactForm();
 
     return (
-        <section className="grid justify-center ">
+        <div className="sm:grid sm:justify-center ">
             <ContactForm onSubmit={handleSubmit} isPending={isPending} currentState={currentState} />
-        </section>
+        </div>
     )
 }
 

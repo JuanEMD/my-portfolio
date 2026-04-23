@@ -48,12 +48,12 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
         onSubmit(formData, clearForm);
     };
 
-    const formClasses = "bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-7 flex flex-col gap-0 max-w-2xl border border-gray-300 dark:border-gray-700";
+    const formClasses = "bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-7 flex flex-col gap-0 w-full max-w-2xl border border-gray-300 dark:border-gray-700";
     const inputWrapperClasses = "grid";
 
     return (
         <form onSubmit={handleOnSubmit} className={formClasses}>
-            <div className="grid grid-cols-2 gap-7">
+            <div className="grid sm:grid-cols-2 gap-1 sm:gap-7">
                 <div className={inputWrapperClasses}>
                     <TextInput
                         id="home-first-name"
@@ -100,7 +100,7 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
                 onBlur={() => handleBlur("message")}
             />
             <StatusMessage message={errors.message} type="error" />
-            <Button type="submit" disabled={isPending} className="mb-1">
+            <Button type="submit" disabled={isPending} className="mt-2 mb-1">
                 {isPending ? t("contact.form.label.sending") : t("contact.form.label.submit")}
             </Button>
             {currentState.success && currentState.message && <StatusMessage className="self-center" type="success" message={t(currentState.message)} />}

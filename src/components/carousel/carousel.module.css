@@ -1,7 +1,18 @@
-.carousel--item{
+.carousel__item {
     flex: 0 0 10em;
 }
 
-.carousel--group {
+.carousel__group {
     display: flex;
+    animation: infinite-scroll 20s linear infinite;
+}
+
+@keyframes infinite-scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
 }

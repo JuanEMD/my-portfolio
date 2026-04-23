@@ -10,11 +10,11 @@ const PersonalInfo = ({ className, info }) => {
     const { name, role, description1, mail, linkedinUrl, githubUrl } = info;
     const { t } = useTranslation("translation");
 
-    const personalInfoClasses = `${className} grid grid-cols-[auto_1fr] gap-10`;
+    const personalInfoClasses = `${className} grid sm:grid-cols-[auto_1fr] gap-10`;
 
     return (
-        <section className={personalInfoClasses}>
-            <div className="grid items-center">
+        <div className={personalInfoClasses}>
+            <div className="grid items-center justify-center">
                 <Image
                     width={170}
                     height={170}
@@ -34,7 +34,7 @@ const PersonalInfo = ({ className, info }) => {
                     {t(description1)}
                 </p>
                 <div className="flex gap-3">
-                    <LinkButtonWithIcon url={mail} label={t("personalInfo.contactMe")} >
+                    <LinkButtonWithIcon url={`mailto:${mail}`} label={t("personalInfo.contactMe")} >
                         <Mail className="w-4 h-4 fill-primary" />
                     </LinkButtonWithIcon>
                     <LinkButtonWithIcon url={linkedinUrl} target="_blank" label="LinkedIn" >
@@ -45,7 +45,7 @@ const PersonalInfo = ({ className, info }) => {
                     </LinkButtonWithIcon>
                 </div>
             </div>
-        </section >
+        </div >
     )
 }
 

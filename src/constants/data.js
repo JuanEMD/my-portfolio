@@ -9,8 +9,9 @@ export const personalInfo = {
   role: "personalInfo.role",
   description1: "personalInfo.description",
   linkedinUrl: "https://www.linkedin.com/in/jemarmolejos/",
-  mail: "mailto:juanernestomarmolejosdanis@gmail.com",
+  mail: "juanernestomarmolejosdanis@gmail.com",
   githubUrl: "https://github.com/JuanEMD",
+  phone: "+1 (809) 875 1370",
 };
 
 export const navLinks = [

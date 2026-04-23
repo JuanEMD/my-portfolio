@@ -1,7 +1,10 @@
 @import "tailwindcss";
 
-/* Usar clase .dark en lugar de prefers-color-scheme */
 @variant dark (&:where(.dark, .dark *));
+
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --background: #FEFEFE;
@@ -16,11 +19,13 @@
   --btn-bg: #3F5F7B;
   --btn-border: #008399;
   --btn-text: #FFFFFF;
+
+  /* translate to hexadecimal */
+  --navbar-border: #dfdddd;
 }
 
 .dark {
   --background: #0a0a0a;
-  /* --primary-color: #6B8FB0; */
   --primary-color: #5782a9;
   --secondary-color: #00A8B8;
   --gray-color: #1A1F26;
@@ -32,6 +37,8 @@
   --btn-bg: #1A3A52;
   --btn-border: #3F5F7B;
   --btn-text: #C8DFF0;
+
+  --navbar-border: #3F5F7B;
 }
 
 @theme inline {
@@ -45,28 +52,4 @@
   --color-btn-bg: var(--btn-bg);
   --color-btn-border: var(--btn-border);
   --color-btn-text: var(--btn-text);
-}
-
-@theme {
-  --animate-infinite-scroll: infinite-scroll 20s linear infinite;
-
-  @keyframes infinite-scroll {
-    from {
-      transform: translateX(0);
-    }
-
-    to {
-      transform: translateX(-100%);
-    }
-  }
-}
-
-.icon {
-  filter: invert(33%) sepia(51%) saturate(406%) hue-rotate(166deg) brightness(91%) contrast(86%);
-}
-
-/* funciona? */
-body {
-  background: var(--background);
-  transition: background-color 0.1s ease;
 }

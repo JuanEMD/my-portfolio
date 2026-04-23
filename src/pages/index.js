@@ -41,7 +41,7 @@ const wrapperClasses =
   "h-full bg-gradient-to-b from-gray-100 to-slate-300 dark:from-gray-800 dark:to-slate-900";
 const containerClasses =
   "w-full max-w-[900px] grid grid-rows-[auto_1fr_auto] mx-auto h-full";
-const mainClasses = "p-10";
+const mainClasses = " p-5 sm:p-10";
 
 const languajes = [
   { code: "en", label: "English" },

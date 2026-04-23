@@ -2,3 +2,20 @@
     display: flex;
     justify-content: flex-end;
 }
+
+.navbar__scroll__border {
+    border: 1px solid transparent;
+    animation: nav-border linear both;
+    animation-timeline: scroll(root);
+    animation-range: 0px 60px;
+}
+
+@keyframes nav-border {
+    from {
+        border-color: transparent;
+    }
+
+    to {
+        border-color: var(--navbar-border);
+    }
+}

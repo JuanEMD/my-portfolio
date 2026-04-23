@@ -4,7 +4,7 @@ import styles from "./carousel.module.css";
 const Element = ({ data }) => {
     const { title, url } = data;
 
-    const elementClass = ` text-center content-center ${styles['carousel--item']} scale-115 hover:scale-130`
+    const elementClass = ` text-center content-center ${styles['carousel__item']} scale-115 hover:scale-130`
 
     return (
         <div className={elementClass}>
@@ -15,8 +15,8 @@ const Element = ({ data }) => {
 
 const Carousel = ({ items }) => {
 
-    const carouselClass = "max-w-200 flex mt-10 mx-auto w-full overflow-x-hidden overflow-y-hidden p-5"
-    const groupClass = `gap-5 animate-infinite-scroll pr-5 ${styles['carousel--group']} `
+    const carouselClass = "max-w-80 sm:max-w-130 md:max-w-160 lg:max-w-200 flex mt-10 mx-auto w-full overflow-x-hidden overflow-y-hidden p-5"
+    const groupClass = `gap-5 animate-infinite-scroll pr-5 ${styles['carousel__group']} `
 
     return (
         <div className={carouselClass}>

@@ -5,8 +5,8 @@ const EducationCard = ({ education }) => {
     const { title, institution, startDate, endDate, countryName } = education;
     const { t } = useTranslation("translation");
 
-    const containerClasses = "grid grid-cols-[auto_1fr] gap-4 bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-primary";
-    const educationContainer = "w-34 flex flex-col items-center justify-center gap-2 border-r border-gray-300 dark:border-gray-700 pr-3";
+    const containerClasses = "grid sm:grid-cols-[auto_1fr] gap-4 bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-3 border border-gray-300 dark:border-gray-700 text-primary divide-y sm:divide-y-0 sm:divide-x divide-gray-300 dark:divide-gray-700";
+    const educationContainer = "w-full sm:w-34 flex flex-col items-center justify-center gap-2 pb-2 sm:pb-0 sm:pr-3";
     const descriptionContainer = "grid";
 
     return (
