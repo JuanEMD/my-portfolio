@@ -71,12 +71,19 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                     <ul className="flex flex-col list-none p-0 m-0">
                         {items.map((item) => (
                             <li className="flex justify-center py-3!" key={item.title}>
-                                <NavLink className="" href={item.href} label={item.label} onClick={() => setMenuOpen(false)}>
+                                <NavLink className="w-full flex justify-center" href={item.href} label={item.label} onClick={() => setMenuOpen(false)}>
                                     {item.label}
                                 </NavLink>
                             </li>
                         ))}
                     </ul>
+                    <div className="flex items-center justify-center gap-5 py-3">
+                    <ButtonWithIcon onClick={onLanguageChange} className="group w-16 h-16" ariaLabel={t("nav.switchLanguage")}>
+                        <Languajes className="w-7 h-7 text-primary group-hover:hidden" />
+                        <span className="hidden group-hover:inline text-primary px-1 text-xl font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
+                    </ButtonWithIcon>
+                    <ThemeToggle className="w-16 h-16" iconClassName="w-7 h-7" />
+                </div>
                 </nav>
             )}
         </header>

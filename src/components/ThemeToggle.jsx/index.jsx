@@ -8,15 +8,17 @@ import Desktop from '../icons/Desktop';
 
 const subscribe = () => () => { };
 
-export const ThemeToggle = () => {
+export const ThemeToggle = ({ className, iconClassName }) => {
     const { theme, toggleTheme } = useTheme();
     const mounted = useSyncExternalStore(subscribe, () => true, () => false);
 
+    const iconClasses = `${iconClassName} w-4 h-4 text-primary`;
+
     return (
-        <ButtonWithIcon onClick={toggleTheme}>
-            {mounted && theme === 'dark' && <Moon className="w-4 h-4 text-primary" />}
-            {mounted && theme === 'light' && <Sun className="w-4 h-4 text-primary" />}
-            {mounted && theme === 'system' && <Desktop className="w-4 h-4 text-primary" />}
+        <ButtonWithIcon className={className} onClick={toggleTheme}>
+            {mounted && theme === 'dark' && <Moon className={iconClasses} />}
+            {mounted && theme === 'light' && <Sun className={iconClasses} />}
+            {mounted && theme === 'system' && <Desktop className={iconClasses} />}
         </ButtonWithIcon>
     );
 };
