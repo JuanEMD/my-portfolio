@@ -1,11 +1,12 @@
 import { useState } from "react";
-import Languajes from "@/components/icons/Languajes";
+import { useTranslation } from "next-i18next/pages";
+
 import styles from "./navbar.module.css";
+import Languajes from "@/components/icons/Languajes";
 import ButtonWithIcon from "../../components/common/button/ButtonWithIcon";
 import HomeLink from "./HomeLink";
 import NavLink from "./NavLink";
 import ThemeToggle from "@/components/ThemeToggle.jsx";
-import { useTranslation } from "next-i18next/pages";
 
 const MenuIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -78,12 +79,12 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                         ))}
                     </ul>
                     <div className="flex items-center justify-center gap-5 py-3">
-                    <ButtonWithIcon onClick={onLanguageChange} className="group w-16 h-16" ariaLabel={t("nav.switchLanguage")}>
-                        <Languajes className="w-7 h-7 text-primary group-hover:hidden" />
-                        <span className="hidden group-hover:inline text-primary px-1 text-xl font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
-                    </ButtonWithIcon>
-                    <ThemeToggle className="w-16 h-16" iconClassName="w-7 h-7" />
-                </div>
+                        <ButtonWithIcon onClick={onLanguageChange} className="group w-16 h-16" ariaLabel={t("nav.switchLanguage")}>
+                            <Languajes className="w-7 h-7 text-primary group-hover:hidden" />
+                            <span className="hidden group-hover:inline text-primary px-1 text-xl font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
+                        </ButtonWithIcon>
+                        <ThemeToggle className="w-16 h-16" iconClassName="w-7 h-7" />
+                    </div>
                 </nav>
             )}
         </header>

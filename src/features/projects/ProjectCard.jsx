@@ -1,9 +1,8 @@
-import Image from 'next/image';
+import { useTranslation } from 'next-i18next/pages';
 import PillWithIcon from '../../components/common/pill/PillWithIcon';
 import LinkButton from '../../components/common/button/LinkButton';
 import ArrowUpRight from '../../components/icons/ArrowUpRight';
 import AppWindow from '@/components/icons/AppWindow';
-import { useTranslation } from 'next-i18next/pages';
 
 const ImageContainer = ({ imageUrl }) => {
     const { t } = useTranslation("translation");

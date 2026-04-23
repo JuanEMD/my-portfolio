@@ -1,10 +1,9 @@
-'use client';
 import { useSyncExternalStore } from 'react';
 import { useTheme } from '@/context/ThemeContext';
 import Sun from '@/components/icons/Sun';
 import Moon from '@/components/icons/Moon';
-import ButtonWithIcon from '../common/button/ButtonWithIcon';
 import Desktop from '../icons/Desktop';
+import ButtonWithIcon from '../common/button/ButtonWithIcon';
 
 const subscribe = () => () => { };
 

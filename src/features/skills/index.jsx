@@ -1,10 +1,8 @@
-import PillWithIcon from "../../components/common/pill/PillWithIcon";
-import styles from "./skills.module.css";
 import { useTranslation } from "next-i18next/pages";
+import PillWithIcon from "../../components/common/pill/PillWithIcon";
 
 const Skills = ({ skills }) => {
     const { t } = useTranslation("translation");
-    // const skillClasses = `${styles["skills-container"]}`;
 
     return (
         <div className="bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 border border-gray-300  dark:border-gray-700 rounded-lg p-3 w-full">

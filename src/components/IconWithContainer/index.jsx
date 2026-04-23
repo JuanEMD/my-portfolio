@@ -1,5 +1,4 @@
 import Image from "next/image";
-import Tooltip from "../common/tooltip";
 
 const IconWithContainer = ({ icon, name, iconWidth = 20, iconHeight = 20 }) => {
 

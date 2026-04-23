@@ -1,5 +1,5 @@
-import University from "@/components/icons/University";
 import { useTranslation } from "next-i18next/pages";
+import University from "@/components/icons/University";
 
 const EducationCard = ({ education }) => {
     const { title, institution, startDate, endDate, countryName } = education;

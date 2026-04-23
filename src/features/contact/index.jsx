@@ -1,5 +1,5 @@
-import ContactForm from "./ContactForm";
 import { useContactForm } from "./useContactForm";
+import ContactForm from "./ContactForm";
 
 const Contact = () => {
     const { handleSubmit, isPending, currentState } = useContactForm();

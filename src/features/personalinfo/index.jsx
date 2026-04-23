@@ -1,10 +1,10 @@
 import Image from "next/image";
+import { useTranslation } from "next-i18next/pages";
 import profilePhoto from "../../../public/images/formal_smile.png";
 import Linkedin from "@/components/icons/Linkedin";
 import Mail from "@/components/icons/Mail";
 import Github from "@/components/icons/Github";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
-import { useTranslation } from "next-i18next/pages";
 
 const PersonalInfo = ({ className, info }) => {
     const { name, role, description1, mail, linkedinUrl, githubUrl } = info;

@@ -1,6 +1,7 @@
-import Navbar from "@/features/navbar";
-import PersonalInfo from "@/features/personalinfo";
-// import { Geist, Geist_Mono } from "next/font/google";
+import { useRouter } from "next/router";
+
+import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
+import { useTranslation } from "next-i18next/pages";
 
 import {
   navLinks,
@@ -11,9 +12,8 @@ import {
   education,
   certificates,
   personalInfo,
+  languajes,
 } from "@/constants/data";
-
-import { useRouter } from "next/router";
 
 import Header from "@/components/common/header";
 import Projects from "@/features/projects";
@@ -23,30 +23,14 @@ import Education from "@/features/education";
 import Contact from "@/features/contact";
 import SectionContainer from "@/components/sectionContainer";
 import Footer from "@/features/footer";
-
-import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
-import { useTranslation } from "next-i18next/pages";
-
-// const geistSans = Geist({
-//   variable: "--font-geist-sans",
-//   subsets: ["latin"],
-// });
-
-// const geistMono = Geist_Mono({
-//   variable: "--font-geist-mono",
-//   subsets: ["latin"],
-// });
+import Navbar from "@/features/navbar";
+import PersonalInfo from "@/features/personalinfo";
 
 const wrapperClasses =
   "h-full bg-gradient-to-b from-gray-100 to-slate-300 dark:from-gray-800 dark:to-slate-900";
 const containerClasses =
   "w-full max-w-[900px] grid grid-rows-[auto_1fr_auto] mx-auto h-full";
 const mainClasses = " p-5 sm:p-10";
-
-const languajes = [
-  { code: "en", label: "English" },
-  { code: "es", label: "Español" },
-];
 
 export default function Home() {
   const { t } = useTranslation("translation");

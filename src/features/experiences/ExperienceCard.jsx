@@ -1,5 +1,5 @@
-import Company from "@/components/icons/Company";
 import { useTranslation } from "next-i18next/pages";
+import Company from "@/components/icons/Company";
 
 const ExperienceCard = ({ experience }) => {
     const { company, position, startDate, endDate, description } = experience;

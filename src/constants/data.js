@@ -15,11 +15,11 @@ export const personalInfo = {
 };
 
 export const navLinks = [
-  { title: "projects",    label: "nav.projects",    href: "#projects" },
-  { title: "skills",      label: "nav.skills",      href: "#skills" },
+  { title: "projects", label: "nav.projects", href: "#projects" },
+  { title: "skills", label: "nav.skills", href: "#skills" },
   { title: "experiences", label: "nav.experiences", href: "#experiences" },
-  { title: "education",   label: "nav.education",   href: "#education" },
-  { title: "contact",     label: "nav.contact",     href: "#contact" },
+  { title: "education", label: "nav.education", href: "#education" },
+  { title: "contact", label: "nav.contact", href: "#contact" },
 ];
 
 export const projects = [
@@ -170,4 +170,9 @@ export const certificates = [
     title: "Javascript and JQery",
     url: "/images/certificates/udemy_JS_JQ.png",
   },
+];
+
+export const languajes = [
+  { code: "en", label: "English" },
+  { code: "es", label: "Español" },
 ];

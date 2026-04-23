@@ -1,9 +1,9 @@
+import { useTranslation } from "next-i18next/pages";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
 import Github from "@/components/icons/Github";
 import Linkedin from "@/components/icons/Linkedin";
 import Mail from "@/components/icons/Mail"
 import Phone from "@/components/icons/Phone";
-import { useTranslation } from "next-i18next/pages";
 
 const Footer = ({ personalInfo }) => {
     const { linkedinUrl, githubUrl, mail, phone } = personalInfo;
