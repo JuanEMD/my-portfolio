@@ -1,40 +1,66 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# Juan Marmolejos — Portfolio
 
-## Getting Started
+Personal portfolio built to showcase projects, skills, and professional experience. This document explains the technical decisions behind the implementation.
 
-First, run the development server:
+## Tech Stack
+
+### Next.js 16 (Pages Router)
+
+Next.js provides server-side rendering and static generation out of the box. The Pages Router was chosen over the App Router for compatibility with `next-i18next`, which does not support the App Router. For a single-page portfolio, the Pages Router is sufficient and reduces complexity.
+
+### React 19
+
+Latest stable version. No breaking changes for this use case. Used for component composition, local state (burger menu, theme toggle, contact form), and context (theme).
+
+### Tailwind CSS v4
+
+Utility-first CSS. Chosen for rapid development and consistent spacing/color scales without writing custom CSS for every component. v4 uses the `@theme` directive instead of a config file, which reduces project boilerplate. Dark mode is handled via the `.dark` class on the `<html>` element, toggled from a React context.
+
+### next-i18next
+
+Handles English/Spanish translations. Integrates directly with the Pages Router via `getStaticProps` + `serverSideTranslations`. Translations live in `public/locales/{lang}/translation.json`. Language is switched via Next.js locale routing (`router.push` with `locale` option).
+
+### Resend
+
+Used for the contact form API route (`pages/api/contact.js`). Sends emails server-side, keeping credentials out of the client bundle. Chosen over alternatives (Nodemailer, SendGrid) for its simple REST-based API and generous free tier.
+
+## Architecture
+
+### Layout Component
+
+All pages share a single `src/layouts/index.jsx` component that wraps content with the gradient background, max-width container, Navbar, and Footer. This keeps page files focused on content and avoids duplicating structural markup. The layout also owns language-switching logic since it has access to `useRouter`.
+
+### Feature-based Structure
+
+Code is organized by feature (`src/features/`) rather than by type (components/containers). Each feature owns its JSX, logic, and styles. Shared UI primitives (buttons, inputs, pills) live in `src/components/common/`. This structure scales well and makes it easy to locate and modify a specific section of the portfolio.
+
+## Practices
+
+### WCAG 2.1 AA Accessibility
+
+Semantic HTML throughout (`<main>`, `<nav>`, `<article>`, `<ul>`/`<li>` for nav links and skill lists). All interactive elements have visible focus styles via `:focus-visible`. The contact form uses `aria-required`, `aria-invalid`, `aria-describedby`, and `role="alert"` for inline error messages. A skip-to-content link is present for keyboard users. External links include `rel="noopener noreferrer"` and a visually hidden "(opens in new tab)" notice.
+
+### Mobile-first Responsive Design
+
+Default Tailwind classes target mobile. `sm:` (640px+) breakpoint adds tablet/desktop layout. Single-column card layouts stack vertically on mobile and switch to side-by-side grids on wider screens.
+
+### SEO
+
+`<Head>` in the layout injects `<title>`, `<meta name="description">`, `<meta name="keywords">`, and `<meta name="author">` with translated values on every render. Keywords and descriptions are stored in the translation JSON files alongside other copy, keeping all user-facing text in one place.
+
+## Running Locally
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
+pnpm install
 pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Build
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+```bash
+pnpm build
+pnpm start
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
-
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
