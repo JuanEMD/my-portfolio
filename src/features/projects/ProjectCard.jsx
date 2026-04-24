@@ -1,5 +1,5 @@
 import { useTranslation } from 'next-i18next/pages';
-import PillWithIcon from '../../components/common/pill/PillWithIcon';
+import Pill from '../../components/common/pill/Pill';
 import LinkButton from '../../components/common/button/LinkButton';
 import ArrowUpRight from '../../components/icons/ArrowUpRight';
 import AppWindow from '@/components/icons/AppWindow';
@@ -29,7 +29,7 @@ const ContentContainer = ({ title, description, skills, projectUrl }) => {
             <p className='mb-4 text-primary'>{description}</p>
             <div className='flex flex-wrap gap-x-2 gap-y-2 mb-4'>
                 {skills?.map((skill, index) => (
-                    <PillWithIcon key={index} text={skill.name} icon={skill.icon} />
+                    <Pill key={index} text={skill.name} />
                 ))}
             </div>
             <div className='w-full grid justify-end mt-10'>

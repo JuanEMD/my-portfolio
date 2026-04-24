@@ -31,7 +31,9 @@ const PersonalInfo = ({ className, info }) => {
                     {t(role)}
                 </h3>
                 <p className="text-md text-primary max-w-140">
-                    {t(description1)}
+                    {t("personalInfo.descriptionPart1")}
+                    <span className="text-secondary font-semibold">{t("personalInfo.descriptionHighlight")}</span>
+                    {t("personalInfo.descriptionPart2")}
                 </p>
                 <div className="flex gap-3">
                     <LinkButtonWithIcon url={`mailto:${mail}`} label={t("personalInfo.contactMe")} >

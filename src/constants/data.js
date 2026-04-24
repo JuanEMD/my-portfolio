@@ -1,3 +1,7 @@
+export const seo = {
+  keywords: "seo.keywords",
+};
+
 export const homeLink = {
   title: "Home",
   label: "nav.home",
@@ -68,43 +72,54 @@ export const projects = [
 
 export const skills = {
   frontend: [
-    { name: "React", icon: "" },
-    { name: "Next.js", icon: "" },
-    { name: "Redux", icon: "" },
-    { name: "Typescript", icon: "" },
-    { name: "Vue.js", icon: "" },
-    { name: "CSS", icon: "" },
-    { name: "SCSS", icon: "" },
-    { name: "Tailwind", icon: "" },
-    { name: "Bootstrap", icon: "" },
-    { name: "Material Ui", icon: "" },
+    { name: "React" },
+    { name: "Next.js" },
+    { name: "Redux" },
+    { name: "Typescript" },
+    { name: "Vue.js" },
+    { name: "CSS" },
+    { name: "SCSS" },
+    { name: "Tailwind" },
+    { name: "Bootstrap" },
+    { name: "Material Ui" },
   ],
   backend: [
-    { name: "Node.js", icon: "" },
-    { name: ".Net", icon: "" },
+    { name: "Node.js" },
+    { name: ".Net" },
   ],
   databases: [
-    { name: "SQL Server", icon: "" },
-    { name: "MongoDB", icon: "" },
+    { name: "SQL Server" },
+    { name: "MongoDB" },
   ],
   testing: [
-    { name: "Jest", icon: "" },
-    { name: "Vitest", icon: "" },
+    { name: "Jest" },
+    { name: "Vitest" },
   ],
   cloud: [
-    { name: "Azure", icon: "" },
-    { name: "AWS", icon: "" },
+    { name: "Azure" },
+    { name: "AWS" },
   ],
   tools: [
-    { name: "Git", icon: "" },
-    { name: "Postman", icon: "" },
+    { name: "Git" },
+    { name: "Postman" },
   ],
   Practices: [
-    { name: "RESTful", icon: "" },
-    { name: "Agile", icon: "" },
-    { name: "SOLID", icon: "" },
-    { name: "DRY", icon: "" },
-    { name: "Clean Code", icon: "" },
+    { name: "RESTful" },
+    { name: "Agile" },
+    { name: "SOLID" },
+    { name: "DRY" },
+    { name: "Clean Code" },
+  ],
+  softSkills: [
+    { name: "skills.softSkills.teamWork" },
+    { name: "skills.softSkills.communication" },
+    { name: "skills.softSkills.collaboration" },
+    { name: "skills.softSkills.selfManaged" },
+    { name: "skills.softSkills.proactive" },
+    { name: "skills.softSkills.problemSolving" },
+    { name: "skills.softSkills.adaptability" },
+    { name: "skills.softSkills.attentionToDetail" },
+    { name: "skills.softSkills.continuousLearning" },
   ],
 };
 

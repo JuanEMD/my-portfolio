@@ -1,7 +1,7 @@
 import { useRouter } from "next/router";
 import { useTranslation } from "next-i18next/pages";
 
-import { navLinks, homeLink, personalInfo, languajes } from "@/constants/data";
+import { navLinks, homeLink, personalInfo, languajes, seo } from "@/constants/data";
 import Navbar from "@/features/navbar";
 import Footer from "@/features/footer";
 import Head from "next/head";
@@ -26,6 +26,10 @@ const Layout = ({ children }) => {
             <Head>
                 <title>{`${personalInfo.name} — ${t("personalInfo.role")}`}</title>
                 <meta name="description" content={t("personalInfo.description")} />
+                {/* keywords */}
+                <meta name="keywords" content={t(seo.keywords)} />
+                <meta name="author" content={personalInfo.name} />
+
             </Head>
             <div id="home" className={wrapperClasses}>
                 <div className={containerClasses}>

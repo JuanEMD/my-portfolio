@@ -1,7 +1,13 @@
 {
+  "seo": {
+    "keywords": "Juan Marmolejos, Juan Ernesto Marmolejos Danis, Software Engineer, Full Stack Developer, Frontend Developer, React, Next.js, TypeScript, Redux, Vue.js, Tailwind CSS, Node.js, .NET, Azure, AWS, web development, portfolio"
+  },
   "personalInfo": {
     "role": "Software Engineer",
-    "description": "Full Stack Developer with a frontend focus and 4 years of experience building scalable web applications. I enjoy creating efficient solutions that simplify processes and deliver great user experiences.",
+    "description": "Frontend-focused Full Stack Developer with 4+ years of experience in React, Next.js & TypeScript. I build scalable applications and ship clean, production-ready code.",
+    "descriptionPart1": "Frontend-focused Full Stack Developer with ",
+    "descriptionHighlight": "4+ years of experience",
+    "descriptionPart2": " in React, Next.js & TypeScript. I build scalable applications and ship clean, production-ready code.",
     "contactMe": "Contact me"
   },
   "nav": {
@@ -27,7 +33,19 @@
       "testing": "Testing",
       "cloud": "Cloud",
       "tools": "Tools",
-      "Practices": "Practices"
+      "Practices": "Practices",
+      "softSkills": "Soft Skills"
+    },
+    "softSkills": {
+      "teamWork": "Team Work",
+      "communication": "Communication",
+      "collaboration": "Collaboration",
+      "selfManaged": "Self-managed",
+      "proactive": "Proactive",
+      "problemSolving": "Problem Solving",
+      "adaptability": "Adaptability",
+      "attentionToDetail": "Attention to Detail",
+      "continuousLearning": "Continuous Learning"
     }
   },
   "projects": {
