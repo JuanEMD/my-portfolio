@@ -1,4 +1,4 @@
-const Linkedin = ({ className }) => {
+const Linkedin = ({ className = "" }) => {
 
     const classes = `${className}`;
 

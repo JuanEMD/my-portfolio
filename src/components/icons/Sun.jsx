@@ -1,4 +1,4 @@
-const Sun = ({ className }) => {
+const Sun = ({ className = "" }) => {
 
     const classes = `${className}`;
 

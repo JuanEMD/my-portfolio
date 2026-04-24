@@ -1,4 +1,4 @@
-const Github = ({ className }) => {
+const Github = ({ className = "" }) => {
 
     const classes = `${className}`;
 

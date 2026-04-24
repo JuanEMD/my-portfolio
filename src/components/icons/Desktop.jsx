@@ -1,4 +1,4 @@
-const Desktop = ({ className }) => {
+const Desktop = ({ className = "" }) => {
 
     const classes = `${className}`;
 

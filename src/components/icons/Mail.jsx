@@ -1,4 +1,4 @@
-const Mail = ({ className }) => {
+const Mail = ({ className = "" }) => {
 
     const classes = `${className}`;
 

@@ -1,4 +1,4 @@
-const Phone = ({ className }) => {
+const Phone = ({ className = "" }) => {
 
     const classes = `${className}`;
 
