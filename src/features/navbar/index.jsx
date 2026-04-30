@@ -1,5 +1,8 @@
+import Image from "next/image";
 import { useState } from "react";
 import { useTranslation } from "next-i18next/pages";
+
+import Logo from "../../../public/images/Logo.png";
 
 import styles from "./navbar.module.css";
 import Languajes from "@/components/icons/Languajes";
@@ -40,8 +43,8 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
             <div className="hidden sm:flex items-center justify-between text-sm md:text-base">
                 <nav aria-label={t("nav.main")}>
                     {homeLink && (
-                        <HomeLink href={homeLink.href} label={homeLink.label}>
-                            {homeLink.label}
+                        <HomeLink href={homeLink.href} label={t(homeLink.label)}>
+                            <Image src={Logo} alt={t(homeLink.label)} width={40} height={40} />
                         </HomeLink>
                     )}
                 </nav>
@@ -50,8 +53,8 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                     <ul className="flex gap-2 items-center list-none p-0 m-0">
                         {items.map((item) => (
                             <li key={item.title}>
-                                <NavLink href={item.href} label={item.label}>
-                                    {item.label}
+                                <NavLink href={item.href} label={t(item.label)}>
+                                    {t(item.label)}
                                 </NavLink>
                             </li>
                         ))}
@@ -72,8 +75,8 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                     <ul className="flex flex-col list-none p-0 m-0">
                         {items.map((item) => (
                             <li className="flex justify-center py-3!" key={item.title}>
-                                <NavLink className="w-full flex justify-center" href={item.href} label={item.label} onClick={() => setMenuOpen(false)}>
-                                    {item.label}
+                                <NavLink className="w-full flex justify-center" href={item.href} label={t(item.label)} onClick={() => setMenuOpen(false)}>
+                                    {t(item.label)}
                                 </NavLink>
                             </li>
                         ))}

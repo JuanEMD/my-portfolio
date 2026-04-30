@@ -1,13 +1,14 @@
 {
   "seo": {
-    "keywords": "Juan Marmolejos, Juan Ernesto Marmolejos Danis, Ingeniero de Software, Desarrollador Full Stack, Desarrollador Frontend, React, Next.js, TypeScript, Redux, Vue.js, Tailwind CSS, Node.js, .NET, Azure, AWS, desarrollo web, portafolio"
+    "keywords": "Juan Marmolejos, Juan Ernesto Marmolejos Danis, Ingeniero de Software, Desarrollador Full Stack, Desarrollador Frontend, React, Next.js, TypeScript, Redux, Vue.js, Tailwind CSS, Node.js, .NET, Azure, AWS, desarrollo web, portafolio",
+    "ogImage": "/images/og-image-es.png"
   },
   "personalInfo": {
     "role": "Ingeniero de Software",
-    "description": "Desarrollador Full Stack con enfoque en frontend y más de 4 años de experiencia en React, Next.js y TypeScript. Construyo aplicaciones escalables y entrego código limpio listo para producción.",
+    "description": "Desarrollador Full Stack con enfoque en frontend y más de 4 años de experiencia en React, Next.js y TypeScript.",
     "descriptionPart1": "Desarrollador Full Stack con enfoque en frontend y ",
     "descriptionHighlight": "más de 4 años de experiencia",
-    "descriptionPart2": " en React, Next.js y TypeScript. Construyo aplicaciones escalables y entrego código limpio listo para producción.",
+    "descriptionPart2": " en React, Next.js y TypeScript.",
     "contactMe": "Contáctame"
   },
   "nav": {

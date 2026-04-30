@@ -1,11 +1,8 @@
-import { Html, Head, Main, NextScript } from "next/document";
-import i18nextConfig from "../../next-i18next.config.js";
+import Document, { Html, Head, Main, NextScript } from "next/document";
 
-export default function Document() {
-  const currentLocale = i18nextConfig.i18n.defaultLocale;
-
+export default function MyDocument({ locale }) {
   return (
-    <Html lang={currentLocale}>
+    <Html lang={locale || "en"}>
       <Head />
       <body className="antialiased">
         <Main />
@@ -14,3 +11,8 @@ export default function Document() {
     </Html>
   );
 }
+
+MyDocument.getInitialProps = async (ctx) => {
+  const initialProps = await Document.getInitialProps(ctx);
+  return { ...initialProps, locale: ctx.locale };
+};

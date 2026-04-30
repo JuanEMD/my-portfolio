@@ -1,13 +1,13 @@
 import Image from "next/image";
 import { useTranslation } from "next-i18next/pages";
-import profilePhoto from "../../../public/images/formal_smile.png";
+import profilePhoto from "../../../public/images/jemd_formal_smile.png";
 import Linkedin from "@/components/icons/Linkedin";
 import Mail from "@/components/icons/Mail";
 import Github from "@/components/icons/Github";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
 
 const PersonalInfo = ({ className, info }) => {
-    const { name, role, description1, mail, linkedinUrl, githubUrl } = info;
+    const { name, role, descriptionPart1, descriptionHighlight, descriptionPart2, mail, linkedinUrl, githubUrl } = info;
     const { t } = useTranslation("translation");
 
     const personalInfoClasses = `${className} grid sm:grid-cols-[auto_1fr] gap-10`;
@@ -21,6 +21,8 @@ const PersonalInfo = ({ className, info }) => {
                     src={profilePhoto}
                     alt="Profile picture"
                     className="rounded-full object-cover border-2 border-primary"
+                    placeholder="blur"
+                    priority
                 />
             </div>
             <div className="grid gap-2">
@@ -31,9 +33,9 @@ const PersonalInfo = ({ className, info }) => {
                     {t(role)}
                 </h3>
                 <p className="text-md text-primary max-w-140">
-                    {t("personalInfo.descriptionPart1")}
-                    <span className="text-secondary font-semibold">{t("personalInfo.descriptionHighlight")}</span>
-                    {t("personalInfo.descriptionPart2")}
+                    {t(descriptionPart1)}
+                    <span className="text-secondary font-bold">{t(descriptionHighlight)}</span>
+                    {t(descriptionPart2)}
                 </p>
                 <div className="flex gap-3">
                     <LinkButtonWithIcon url={`mailto:${mail}`} label={t("personalInfo.contactMe")} >

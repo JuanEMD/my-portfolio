@@ -1,5 +1,6 @@
 export const seo = {
   keywords: "seo.keywords",
+  siteUrl: "https://juanemarmolejos.vercel.app",
 };
 
 export const homeLink = {
@@ -11,7 +12,10 @@ export const homeLink = {
 export const personalInfo = {
   name: "Juan Marmolejos",
   role: "personalInfo.role",
-  description1: "personalInfo.description",
+  description: "personalInfo.description",
+  descriptionPart1: "personalInfo.descriptionPart1",
+  descriptionHighlight: "personalInfo.descriptionHighlight",
+  descriptionPart2: "personalInfo.descriptionPart2",
   linkedinUrl: "https://www.linkedin.com/in/jemarmolejos/",
   mail: "juanernestomarmolejosdanis@gmail.com",
   githubUrl: "https://github.com/JuanEMD",
@@ -83,26 +87,11 @@ export const skills = {
     { name: "Bootstrap" },
     { name: "Material Ui" },
   ],
-  backend: [
-    { name: "Node.js" },
-    { name: ".Net" },
-  ],
-  databases: [
-    { name: "SQL Server" },
-    { name: "MongoDB" },
-  ],
-  testing: [
-    { name: "Jest" },
-    { name: "Vitest" },
-  ],
-  cloud: [
-    { name: "Azure" },
-    { name: "AWS" },
-  ],
-  tools: [
-    { name: "Git" },
-    { name: "Postman" },
-  ],
+  backend: [{ name: "Node.js" }, { name: ".Net" }],
+  databases: [{ name: "SQL Server" }, { name: "MongoDB" }],
+  testing: [{ name: "Jest" }, { name: "Vitest" }],
+  cloud: [{ name: "Azure" }, { name: "AWS" }],
+  tools: [{ name: "Git" }, { name: "Postman" }],
   Practices: [
     { name: "RESTful" },
     { name: "Agile" },
