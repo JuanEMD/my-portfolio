@@ -1,11 +1,12 @@
-const StatusMessage = ({ message, className = "", type = "error" }) => {
+const TYPE_CLASSES = {
+    error: "text-red-500",
+    success: "text-green-500",
+};
 
-    const defaultClasses = `text-${type === "error" ? "red" : "green"}-500 min-h-5 ${className}`;
-    return (
-        <small className={defaultClasses}>
-            {message}
-        </small>
-    )
-}
+const StatusMessage = ({ message, className = "", type = "error" }) => (
+    <small className={`${TYPE_CLASSES[type] ?? TYPE_CLASSES.error} min-h-5 ${className}`}>
+        {message}
+    </small>
+);
 
 export default StatusMessage;
