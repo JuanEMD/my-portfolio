@@ -9,7 +9,7 @@ html {
 :root {
   --background: #FEFEFE;
   --primary-color: #3F5F7B;
-  --secondary-color: #008399;
+  --secondary-color: #005f6e;
   --gray-color: #F5F7FA;
 
   --pill-bg: #3F5F7B;
@@ -25,7 +25,7 @@ html {
 
 .dark {
   --background: #0a0a0a;
-  --primary-color: #5782a9;
+  --primary-color: #8ab4d4;
   --secondary-color: #00A8B8;
   --gray-color: #1A1F26;
 

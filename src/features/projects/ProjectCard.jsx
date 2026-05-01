@@ -25,7 +25,7 @@ const ContentContainer = ({ title, description, skills, projectUrl }) => {
 
     return (
         <div className={contentContainerClasses}>
-            <h4 className='text-lg mb-4 text-secondary font-bold'>{title}</h4>
+            <h3 className='text-lg mb-4 text-secondary font-bold'>{title}</h3>
             <p className='mb-4 text-primary'>{description}</p>
             <div className='flex flex-wrap gap-x-2 gap-y-2 mb-4'>
                 {skills?.map((skill, index) => (

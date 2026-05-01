@@ -26,25 +26,25 @@ const PersonalInfo = ({ className, info }) => {
                 />
             </div>
             <div className="grid gap-2">
-                <h2 className="text-3xl text-primary font-medium">
+                <h1 className="text-3xl text-primary font-medium">
                     {name}
-                </h2>
-                <h3 className="text-3xl text-secondary font-medium ">
+                </h1>
+                <h2 className="text-3xl text-secondary font-medium">
                     {t(role)}
-                </h3>
+                </h2>
                 <p className="text-md text-primary max-w-140">
                     {t(descriptionPart1)}
                     <span className="text-secondary font-bold">{t(descriptionHighlight)}</span>
                     {t(descriptionPart2)}
                 </p>
                 <div className="flex gap-3">
-                    <LinkButtonWithIcon url={`mailto:${mail}`} label={t("personalInfo.contactMe")} >
+                    <LinkButtonWithIcon url={`mailto:${mail}`} ariaLabel={t("personalInfo.contactMe")}>
                         <Mail className="w-4 h-4 fill-primary" />
                     </LinkButtonWithIcon>
-                    <LinkButtonWithIcon url={linkedinUrl} target="_blank" label="LinkedIn" >
+                    <LinkButtonWithIcon url={linkedinUrl} target="_blank" ariaLabel="LinkedIn">
                         <Linkedin className="w-4 h-4 fill-primary" />
-                    </LinkButtonWithIcon >
-                    <LinkButtonWithIcon url={githubUrl} target="_blank" label="GitHub" >
+                    </LinkButtonWithIcon>
+                    <LinkButtonWithIcon url={githubUrl} target="_blank" ariaLabel="GitHub">
                         <Github className="w-4 h-4 fill-primary" />
                     </LinkButtonWithIcon>
                 </div>

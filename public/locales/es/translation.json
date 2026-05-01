@@ -19,6 +19,12 @@
     "education": "Educación",
     "contact": "Contacto"
   },
+  "theme": {
+    "switchToLight": "Cambiar a modo claro",
+    "switchToSystem": "Cambiar a modo sistema",
+    "switchToDark": "Cambiar a modo oscuro",
+    "toggle": "Alternar tema"
+  },
   "sections": {
     "projects": "Proyectos",
     "skills": "Habilidades",
@@ -112,6 +118,9 @@
     }
   },
   "footer": {
-    "description": "2026 | Diseñado y desarrollado por Juan Marmolejos"
+    "description": "2026 | Diseñado y desarrollado por Juan Marmolejos",
+    "sendEmail": "Enviar correo",
+    "linkedinProfile": "Perfil de LinkedIn",
+    "githubProfile": "Perfil de GitHub"
   }
 }
