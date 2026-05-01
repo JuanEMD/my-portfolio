@@ -22,17 +22,17 @@ const Footer = ({ personalInfo }) => {
                 <div className="flex gap-3">
                     <span>
                         <LinkButtonWithIcon url={`mailto:${mail}`} ariaLabel={t("footer.sendEmail")}>
-                            <Mail className="w-4 h-4 fill-primary" />
+                            <Mail className="w-4 h-4 fill-icon" />
                         </LinkButtonWithIcon>
                     </span>
                     <span>
                         <LinkButtonWithIcon url={linkedinUrl} target="_blank" ariaLabel={t("footer.linkedinProfile")}>
-                            <Linkedin className="w-4 h-4 fill-primary" />
+                            <Linkedin className="w-4 h-4 fill-icon" />
                         </LinkButtonWithIcon >
                     </span>
                     <span>
                         <LinkButtonWithIcon url={githubUrl} target="_blank" ariaLabel={t("footer.githubProfile")}>
-                            <Github className="w-4 h-4 fill-primary" />
+                            <Github className="w-4 h-4 fill-icon" />
                         </LinkButtonWithIcon>
                     </span>
                 </div>

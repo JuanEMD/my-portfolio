@@ -13,7 +13,7 @@ export const ThemeToggle = ({ className, iconClassName }) => {
     const mounted = useSyncExternalStore(subscribe, () => true, () => false);
 
     const { t } = useTranslation('translation');
-    const iconClasses = `${iconClassName} w-4 h-4 text-primary`;
+    const iconClasses = `${iconClassName} w-4 h-4 text-icon`;
     const THEME_LABELS = { dark: t('theme.switchToLight'), light: t('theme.switchToSystem'), system: t('theme.switchToDark') };
 
     return (

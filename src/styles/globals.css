@@ -21,6 +21,7 @@ html {
   --btn-text: #FFFFFF;
 
   --navbar-border: #dfdddd;
+  --icon-color: #3F5F7B;
 }
 
 .dark {
@@ -38,6 +39,7 @@ html {
   --btn-text: #C8DFF0;
 
   --navbar-border: #3F5F7B;
+  --icon-color: #1A3A52;
 }
 
 @theme inline {
@@ -51,4 +53,5 @@ html {
   --color-btn-bg: var(--btn-bg);
   --color-btn-border: var(--btn-border);
   --color-btn-text: var(--btn-text);
+  --color-icon: var(--icon-color);
 }

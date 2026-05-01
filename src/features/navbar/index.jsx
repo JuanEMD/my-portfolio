@@ -63,8 +63,8 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
 
                 <div className="flex items-center gap-2">
                     <ButtonWithIcon onClick={onLanguageChange} className="group" ariaLabel={t("nav.switchLanguage")}>
-                        <Languajes className="w-4 h-4 text-primary group-hover:hidden" />
-                        <span className="hidden group-hover:inline text-primary text-xs font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
+                        <Languajes className="w-4 h-4 text-icon group-hover:hidden" />
+                        <span className="hidden group-hover:inline text-icon text-xs font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
                     </ButtonWithIcon>
                     <ThemeToggle />
                 </div>
@@ -82,9 +82,9 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                         ))}
                     </ul>
                     <div className="flex items-center justify-center gap-5 py-3">
-                        <ButtonWithIcon onClick={onLanguageChange} className="group w-16 h-16" ariaLabel={t("nav.switchLanguage")}>
-                            <Languajes className="w-7 h-7 text-primary group-hover:hidden" />
-                            <span className="hidden group-hover:inline text-primary px-1 text-xl font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
+                        <ButtonWithIcon onClick={onLanguageChange} className="group w-16 h-16" ariaLabel={t("nav.switchLanguage text-icon!")}>
+                            <Languajes className="w-7 h-7 text-icon group-hover:hidden" />
+                            <span className="hidden group-hover:inline text-icon! px-1 text-xl font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
                         </ButtonWithIcon>
                         <ThemeToggle className="w-16 h-16" iconClassName="w-7 h-7" />
                     </div>

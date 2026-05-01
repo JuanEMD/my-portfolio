@@ -39,13 +39,13 @@ const PersonalInfo = ({ className, info }) => {
                 </p>
                 <div className="flex gap-3">
                     <LinkButtonWithIcon url={`mailto:${mail}`} ariaLabel={t("personalInfo.contactMe")}>
-                        <Mail className="w-4 h-4 fill-primary" />
+                        <Mail className="w-4 h-4 fill-icon" />
                     </LinkButtonWithIcon>
                     <LinkButtonWithIcon url={linkedinUrl} target="_blank" ariaLabel="LinkedIn">
-                        <Linkedin className="w-4 h-4 fill-primary" />
+                        <Linkedin className="w-4 h-4 fill-icon" />
                     </LinkButtonWithIcon>
                     <LinkButtonWithIcon url={githubUrl} target="_blank" ariaLabel="GitHub">
-                        <Github className="w-4 h-4 fill-primary" />
+                        <Github className="w-4 h-4 fill-icon" />
                     </LinkButtonWithIcon>
                 </div>
             </div>
