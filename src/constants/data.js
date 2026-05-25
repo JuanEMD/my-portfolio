@@ -74,6 +74,14 @@ export const projects = [
   },
 ];
 
+export const mainStack = [
+    { name: "MongoDB",  color: "#47A248", letter: "M" },
+    { name: "Express",  color: "#aaaaaa", letter: "Ex" },
+    { name: "React.js", color: "#61DAFB", letter: "⚛" },
+    { name: "Next.js",  color: "#d1d5db", letter: "▲" },
+    { name: "Node.js",  color: "#68A063", letter: "N" },
+];
+
 export const skills = {
   frontend: [
     { name: "React" },

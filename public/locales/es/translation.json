@@ -33,6 +33,7 @@
     "contact": "Contacto"
   },
   "skills": {
+    "allSkills": "Todas las habilidades",
     "categories": {
       "frontend": "Frontend",
       "backend": "Backend",
@@ -118,7 +119,6 @@
     }
   },
   "footer": {
-    "description": "2026 | Diseñado y desarrollado por Juan Marmolejos",
     "sendEmail": "Enviar correo",
     "linkedinProfile": "Perfil de LinkedIn",
     "githubProfile": "Perfil de GitHub"

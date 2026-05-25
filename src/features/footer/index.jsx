@@ -15,7 +15,6 @@ const Footer = ({ personalInfo }) => {
         <footer className={footerClasses}>
             <div className="w-full flex flex-col gap-4 sm:flex-row justify-between">
                 <div className="grid gap-3">
-                    <span className="text-primary">{t("footer.description")}</span>
                     <span className="text-primary flex items-center gap-2"><Mail className="w-4 h-4 fill-primary" /> {mail}</span>
                     <span className="text-primary flex items-center gap-2"><Phone className="w-4 h-4 fill-primary" /> {phone}</span>
                 </div>
