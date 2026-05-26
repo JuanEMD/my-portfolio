@@ -15,7 +15,7 @@ const EducationCard = ({ education }) => {
                 <University className="w-18 h-18" />
             </div>
             <div className={descriptionContainer}>
-                <span className="text-lg text-secondary">{t(title)}</span>
+                <span className="text-lg text-secondary font-bold">{t(title)}</span>
                 <span className="text-md">{institution}</span>
                 <div className="text-sm">
                     <span>{startDate} - {endDate}</span>

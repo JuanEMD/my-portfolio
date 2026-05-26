@@ -14,7 +14,7 @@ const ExperienceCard = ({ experience }) => {
                 <Company className="w-18 h-18 " />
             </div>
             <div>
-                <span className="text-lg text-secondary">{t(position)}</span>
+                <span className="text-lg text-secondary font-bold">{t(position)}</span>
                 <div>
                     <span className="text-md text-primary text-center">{company}</span>
                     <span>{" ▪ "}</span>

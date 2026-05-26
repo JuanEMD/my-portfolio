@@ -8,7 +8,7 @@ const Element = ({ data }) => {
 
     return (
         <div className={elementClass}>
-            <Image className=" rounded-lg border border-primary" src={url} alt={title} width={140} height={140} />
+            <Image className=" rounded-lg border border-primary" src={url} alt={title} width={200} height={200} />
         </div>
     )
 }

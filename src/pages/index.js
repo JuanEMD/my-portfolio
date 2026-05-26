@@ -34,13 +34,13 @@ export default function Home() {
         <SectionContainer className="pt-0!">
           <PersonalInfo info={personalInfo} />
         </SectionContainer>
-        <SectionContainer id="projects">
-          <Header title={t("sections.projects")} />
-          <Projects projects={projects} />
-        </SectionContainer>
         <SectionContainer id="skills">
           <Header title={t("sections.skills")} />
           <Skills skills={skills} />
+        </SectionContainer>
+        <SectionContainer id="projects">
+          <Header title={t("sections.projects")} />
+          <Projects projects={projects} />
         </SectionContainer>
         <SectionContainer id="experiences">
           <Header title={t("sections.experiences")} />

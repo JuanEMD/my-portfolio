@@ -23,8 +23,8 @@ export const personalInfo = {
 };
 
 export const navLinks = [
-  { title: "projects", label: "nav.projects", href: "#projects" },
   { title: "skills", label: "nav.skills", href: "#skills" },
+  { title: "projects", label: "nav.projects", href: "#projects" },
   { title: "experiences", label: "nav.experiences", href: "#experiences" },
   { title: "education", label: "nav.education", href: "#education" },
   { title: "contact", label: "nav.contact", href: "#contact" },
