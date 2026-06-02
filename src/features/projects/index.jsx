@@ -6,7 +6,7 @@ const Projects = ({ projects }) => {
     return (
         <div className={projectsClasses}>
             {projects?.map((project, index) => (
-                <ProjectCard key={index} {...project} />
+                <ProjectCard key={index} project={project} />
             ))}
         </div>
     )

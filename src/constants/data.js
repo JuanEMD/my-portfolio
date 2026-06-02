@@ -34,6 +34,8 @@ export const projects = [
   {
     title: "projects.medicalDocument.title",
     description: "projects.medicalDocument.description",
+    highlightsKey: "projects.medicalDocument.highlights",
+    company: "Humano Seguros",
     imageUrl: null,
     projectUrl: "",
     skills: [
@@ -48,6 +50,8 @@ export const projects = [
   {
     title: "projects.travelManagement.title",
     description: "projects.travelManagement.description",
+    highlightsKey: "projects.travelManagement.highlights",
+    company: "Bitbox Caribe",
     imageUrl: null,
     projectUrl: "",
     skills: [
@@ -62,6 +66,8 @@ export const projects = [
   {
     title: "projects.reportingGenerator.title",
     description: "projects.reportingGenerator.description",
+    highlightsKey: "projects.reportingGenerator.highlights",
+    company: "Bitbox Caribe",
     imageUrl: null,
     projectUrl: "",
     skills: [
@@ -70,6 +76,21 @@ export const projects = [
       { name: "Typescript" },
       { name: "Material UI" },
       { name: "AWS" },
+    ],
+  },
+  {
+    title: "projects.incidentReporting.title",
+    description: "projects.incidentReporting.description",
+    highlightsKey: "projects.incidentReporting.highlights",
+    company: "Bitbox Caribe",
+    imageUrl: null,
+    projectUrl: "",
+    skills: [
+      { name: "Next.js" },
+      { name: "Typescript" },
+      { name: "Tailwind" },
+      { name: "Node.js" },
+      { name: "MongoDB" },
     ],
   },
 ];

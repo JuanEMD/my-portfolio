@@ -59,16 +59,39 @@
   "projects": {
     "medicalDocument": {
       "title": "Medical Document Processing System",
-      "description": "Developed an internal tool to automate medical document validation workflows, improving operational efficiency for insurance processes."
+      "description": "Developed an internal platform to automate the validation and management of medical documents used in insurance operations. The solution significantly reduced manual tasks, improved operational efficiency, and optimized document processing times.",
+      "highlights": [
+        "Participated in architecture and technical design decisions to ensure scalability and maintainability",
+        "Collaborated with cross-functional teams under Agile methodologies to deliver business-aligned solutions"
+      ]
     },
     "travelManagement": {
       "title": "Internal Travel Management System",
-      "description": "Built a centralized platform to manage corporate travel requests, approvals, and reporting, replacing manual email and spreadsheet-based workflows."
+      "description": "Developed a centralized platform for managing corporate travel, including requests, approvals, and reporting. The system replaced manual processes based on emails and spreadsheets, improving traceability and operational efficiency.",
+      "highlights": [
+        "Automated approval workflows and centralized corporate travel information",
+        "Improved traceability and operational efficiency by replacing fragmented manual processes"
+      ]
     },
     "reportingGenerator": {
       "title": "Dynamic Data Reporting Generator",
-      "description": "Developed a dynamic reporting tool that enables users with basic database knowledge to generate customized reports across multiple tables and data sources. The platform allows users to create and access reports from any registered database without leaving the application."
+      "description": "Designed and developed a dynamic report generation tool that enables users with basic database knowledge to create customized reports from multiple tables and data sources, reducing dependency on database administrators for reporting tasks.",
+      "highlights": [
+        "Created an intuitive interface for building queries and reports without external tools",
+        "Integrated with multiple databases registered within the platform",
+        "Reduced dependency on database administrators for reporting tasks, freeing them to focus on higher-value activities"
+      ]
     },
+    "incidentReporting": {
+      "title": "Incident Reporting Management System",
+      "description": "Designed and developed a centralized incident reporting platform that enabled store employees to report workplace incidents and product-related issues through a structured and traceable workflow. The system improved visibility into operational risks and facilitated faster resolution.",
+      "highlights": [
+        "Developed user-friendly reporting workflows and forms to improve adoption and data accuracy",
+        "Implemented role-based access and incident tracking features to support different operational teams",
+        "Replaced fragmented reporting methods with a centralized solution, improving process standardization"
+      ]
+    },
+    "viewDetails": "View details",
     "previewText": {
       "notPublic1": "Internal tool",
       "notPublic2": "UI Preview Not Public"
@@ -76,12 +99,12 @@
   },
   "experiences": {
     "humano": {
-      "position": "Programmer Analyst II",
-      "description": "Develop and maintain internal business applications by designing and implementing a React and .NET-based solution that automated medical document processing workflows, significantly reducing manual validation time and streamlining internal management processes."
+      "position": "Full Stack Engineer",
+      "description": "Full stack development of internal business applications using Next.js, TypeScript, Redux, .NET, Tailwind CSS, and Material UI. Participated in architecture decisions and collaborated with cross-functional teams under Agile methodologies."
     },
     "bitbox": {
-      "position": "Web Developer",
-      "description": "Contributed to the frontend development of an Internal Travel Management System, a centralized platform for handling corporate travel requests, hotel reservations, and transportation options with configurable alternatives per category."
+      "position": "Frontend Engineer",
+      "description": "Frontend engineering on internal platforms using Next.js, TypeScript, Redux, and Tailwind CSS. Delivered 3 projects spanning corporate travel management, dynamic data reporting, and operational incident tracking."
     }
   },
   "education": {

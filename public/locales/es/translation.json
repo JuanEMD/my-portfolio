@@ -59,16 +59,39 @@
   "projects": {
     "medicalDocument": {
       "title": "Sistema de Procesamiento de Documentos Médicos",
-      "description": "Desarrollé una herramienta interna para automatizar flujos de validación de documentos médicos, mejorando la eficiencia operativa en procesos de seguros."
+      "description": "Desarrollo de una plataforma interna para automatizar los procesos de validación y gestión de documentos médicos utilizados en operaciones de seguros. La solución permitió reducir significativamente las tareas manuales, mejorar la eficiencia operativa y optimizar los tiempos de procesamiento de documentación.",
+      "highlights": [
+        "Participación en decisiones de arquitectura y diseño técnico para garantizar escalabilidad y mantenibilidad",
+        "Colaboración con equipos multidisciplinarios bajo metodologías Agile para entregar soluciones alineadas con el negocio"
+      ]
     },
     "travelManagement": {
       "title": "Sistema Interno de Gestión de Viajes",
-      "description": "Construí una plataforma centralizada para gestionar solicitudes de viajes corporativos, aprobaciones e informes, reemplazando flujos de trabajo manuales basados en correos y hojas de cálculo."
+      "description": "Desarrollo de una plataforma centralizada para la gestión de viajes corporativos, incluyendo solicitudes, aprobaciones y reportes. El sistema sustituyó procesos manuales basados en correos electrónicos y hojas de cálculo, mejorando la trazabilidad y eficiencia operativa.",
+      "highlights": [
+        "Automatización de flujos de aprobación y centralización de información corporativa",
+        "Mejora de la trazabilidad y eficiencia operativa al reemplazar procesos manuales fragmentados"
+      ]
     },
     "reportingGenerator": {
       "title": "Generador Dinámico de Reportes",
-      "description": "Desarrollé una herramienta de reportes dinámica que permite a usuarios con conocimientos básicos de bases de datos generar reportes personalizados de múltiples tablas y fuentes de datos. La plataforma permite crear y acceder a reportes de cualquier base de datos registrada sin salir de la aplicación."
+      "description": "Diseño y desarrollo de una herramienta de generación dinámica de reportes que permite a usuarios con conocimientos básicos de bases de datos crear informes personalizados a partir de múltiples tablas y fuentes de datos, reduciendo la dependencia de administradores de bases de datos para tareas de generación de reportes.",
+      "highlights": [
+        "Creación de una interfaz intuitiva para la construcción de consultas y reportes sin necesidad de herramientas externas",
+        "Integración con múltiples bases de datos registradas dentro de la plataforma",
+        "Reducción de la dependencia de administradores de bases de datos para tareas de reportería"
+      ]
     },
+    "incidentReporting": {
+      "title": "Sistema de Gestión de Reportes de Incidencias",
+      "description": "Diseño y desarrollo de una plataforma centralizada de reporte de incidencias que permitió a empleados de tiendas reportar incidentes laborales y problemas relacionados con productos mediante un flujo de trabajo estructurado y trazable. El sistema mejoró la visibilidad sobre riesgos operativos y facilitó una resolución más rápida.",
+      "highlights": [
+        "Desarrollo de flujos de reporte y formularios intuitivos para mejorar la adopción y la precisión de los datos",
+        "Implementación de acceso basado en roles y funciones de seguimiento de incidentes para distintos equipos operativos",
+        "Sustitución de métodos de reporte fragmentados por una solución centralizada, mejorando la estandarización de procesos"
+      ]
+    },
+    "viewDetails": "Ver detalles",
     "previewText": {
       "notPublic1": "Herramienta interna",
       "notPublic2": "Vista previa no pública"
@@ -76,12 +99,12 @@
   },
   "experiences": {
     "humano": {
-      "position": "Analista Programador II",
-      "description": "Desarrollé y mantuve aplicaciones internas de negocio diseñando e implementando una solución basada en React y .NET que automatizó flujos de procesamiento de documentos médicos, reduciendo significativamente el tiempo de validación manual y optimizando los procesos internos de gestión."
+      "position": "Full Stack Engineer",
+      "description": "Desarrollo full stack de aplicaciones internas de negocio con Next.js, TypeScript, Redux, .NET, Tailwind CSS y Material UI. Involucrado en decisiones de arquitectura y colaboración con equipos multidisciplinarios bajo metodologías Agile."
     },
     "bitbox": {
-      "position": "Desarrollador Web",
-      "description": "Contribuí al desarrollo frontend de un Sistema Interno de Gestión de Viajes, una plataforma centralizada para gestionar solicitudes de viajes corporativos, reservas de hoteles y opciones de transporte con alternativas configurables por categoría."
+      "position": "Frontend Engineer",
+      "description": "Ingeniería frontend en plataformas internas con Next.js, TypeScript, Redux y Tailwind CSS. Entregué 3 proyectos en gestión de viajes corporativos, reportería dinámica de datos y seguimiento de incidentes operativos."
     }
   },
   "education": {
