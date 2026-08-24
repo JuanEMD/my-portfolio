@@ -118,9 +118,9 @@ export const skills = {
   ],
   backend: [{ name: "Node.js" }, { name: ".Net" }],
   databases: [{ name: "SQL Server" }, { name: "MongoDB" }],
-  testing: [{ name: "Jest" }, { name: "Vitest" }],
+  testing: [{ name: "Jest" }, { name: "Vitest" }, { name: "Playwright" }],
   cloud: [{ name: "Azure" }, { name: "AWS" }],
-  tools: [{ name: "Git" }, { name: "Postman" }],
+  tools: [{ name: "Git" }, { name: "Postman" }, { name: "Opencode" }, { name: "Cursor" }],
   Practices: [
     { name: "RESTful" },
     { name: "Agile" },
@@ -131,6 +131,7 @@ export const skills = {
   softSkills: [
     { name: "skills.softSkills.teamWork" },
     { name: "skills.softSkills.communication" },
+    { name: "skills.softSkills.adaptation" },
     { name: "skills.softSkills.collaboration" },
     { name: "skills.softSkills.selfManaged" },
     { name: "skills.softSkills.proactive" },
