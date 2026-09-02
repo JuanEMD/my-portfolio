@@ -1,5 +1,5 @@
 // import { useRouter } from "next/router";
-import Head from "next/head";
+// import Head from "next/head";
 
 import { serverSideTranslations } from "next-i18next/pages/serverSideTranslations";
 import { useTranslation } from "next-i18next/pages";
