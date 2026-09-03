@@ -40,6 +40,9 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
 
         if (!isValid) {
             setTouched({ firstName: true, lastName: true, email: true, message: true });
+            const firstErrorField = Object.keys(formErrors)[0];
+            const fieldMap = { firstName: "home-first-name", lastName: "home-last-name", email: "home-email", message: "home-message" };
+            document.getElementById(fieldMap[firstErrorField])?.focus();
             return;
         }
 
@@ -52,7 +55,7 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
     const inputWrapperClasses = "grid";
 
     return (
-        <form onSubmit={handleOnSubmit} className={formClasses}>
+        <form onSubmit={handleOnSubmit} className={formClasses} aria-label="Contact form">
             <div className="grid sm:grid-cols-2 gap-1 sm:gap-7">
                 <div className={inputWrapperClasses}>
                     <TextInput
@@ -63,8 +66,11 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
                         value={firstName}
                         onChange={setFirstName}
                         onBlur={() => handleBlur("firstName")}
+                        required
+                        error={errors.firstName}
+                        errorId="home-first-name-error"
                     />
-                    <StatusMessage message={errors.firstName} type="error" />
+                    <StatusMessage id="home-first-name-error" message={errors.firstName} type="error" />
                 </div>
                 <div className={inputWrapperClasses}>
                     <TextInput
@@ -75,20 +81,28 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
                         value={lastName}
                         onChange={setLastName}
                         onBlur={() => handleBlur("lastName")}
+                        required
+                        error={errors.lastName}
+                        errorId="home-last-name-error"
                     />
-                    <StatusMessage message={errors.lastName} type="error" />
+                    <StatusMessage id="home-last-name-error" message={errors.lastName} type="error" />
                 </div>
             </div>
             <TextInput
                 id="home-email"
                 name="email"
+                type="email"
                 label={t("contact.form.label.email")}
                 placeholder={t("contact.form.placeholder.email")}
                 value={email}
                 onChange={setEmail}
                 onBlur={() => handleBlur("email")}
+                required
+                error={errors.email}
+                errorId="home-email-error"
+                autoComplete="email"
             />
-            <StatusMessage message={errors.email} type="error" />
+            <StatusMessage id="home-email-error" message={errors.email} type="error" />
 
             <Textbox
                 id="home-message"
@@ -98,13 +112,18 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
                 value={message}
                 onChange={setMessage}
                 onBlur={() => handleBlur("message")}
+                required
+                error={errors.message}
+                errorId="home-message-error"
             />
-            <StatusMessage message={errors.message} type="error" />
+            <StatusMessage id="home-message-error" message={errors.message} type="error" />
             <Button type="submit" disabled={isPending} className="mt-2 mb-1">
                 {isPending ? t("contact.form.label.sending") : t("contact.form.label.submit")}
             </Button>
-            {currentState.success && currentState.message && <StatusMessage className="self-center" type="success" message={t(currentState.message)} />}
-            {!currentState.success && currentState.message && <StatusMessage className="self-center" type="error" message={t(currentState.message)} />}
+            <div aria-live="polite" aria-atomic="true" className="self-center">
+                {currentState.success && currentState.message && <StatusMessage type="success" message={t(currentState.message)} />}
+                {!currentState.success && currentState.message && <StatusMessage type="error" message={t(currentState.message)} />}
+            </div>
         </form>
     )
 }

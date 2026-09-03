@@ -74,7 +74,7 @@ describe("handleSubmit", () => {
 
 ## Fase 4: Tests de Servicios
 
-### 4.1 `src/services/send-email/index.test.js` (nuevo)
+### 4.1 `src/services/send-email/index.test.js` ✅
 **Mockear Resend:**
 ```js
 describe("sendEmail", () => {
@@ -91,7 +91,7 @@ describe("sendEmail", () => {
 })
 ```
 
-### 4.2 `src/pages/api/contact.test.js` (nuevo)
+### 4.2 `src/pages/api/contact.test.js` ✅
 **Mockear req/res y sendEmail:**
 ```js
 describe("POST /api/contact", () => {
