@@ -1,13 +1,12 @@
 import { describe, test, expect } from "vitest";
-import { validateEmail, formValidations } from "./validations";
+import { validateEmail } from "./validations";
 
 describe("validateEmail", () => {
   test("should return true for valid emails", () => {
     expect(validateEmail("test@example.com")).toBe(true);
     expect(validateEmail("e.mail@example.com")).toBe(true);
     expect(validateEmail("user.mail@domain.com.do")).toBe(true);
-    expect(validateEmail('user+tag@example.com')).toBe(true);
-
+    expect(validateEmail("user+tag@example.com")).toBe(true);
   });
 
   test("should return false for invalid emails", () => {
@@ -19,36 +18,38 @@ describe("validateEmail", () => {
     expect(validateEmail("email@domain...com")).toBe(false);
     expect(validateEmail("email@domain .com")).toBe(false);
   });
-});
 
-describe("formValidations", () => {
-  test("should return errors for empty form", () => {
-    const errors = formValidations({});
-    expect(errors).toHaveProperty("firstName");
-    expect(errors).toHaveProperty("lastName");
-    expect(errors).toHaveProperty("email");
-    expect(errors).toHaveProperty("message");
+  test("should accept emails with numbers, hyphens, and underscores", () => {
+    expect(validateEmail("user123@domain456.com")).toBe(true);
+    expect(validateEmail("user-name@example.com")).toBe(true);
+    expect(validateEmail("user_name@example.com")).toBe(true);
   });
 
-  test("should return empty object for valid form", () => {
-    const formData = {
-      firstName: "John",
-      lastName: "Doe",
-      email: "john@example.com",
-      message: "Test message",
-    };
-    const errors = formValidations(formData);
-    expect(Object.keys(errors)).toHaveLength(0);
+  test("should accept emails with long TLDs", () => {
+    expect(validateEmail("user@example.photography")).toBe(true);
+    expect(validateEmail("user@example.international")).toBe(true);
   });
 
-  test("should return email error for invalid email", () => {
-    const formData = {
-      firstName: "John",
-      lastName: "Doe",
-      email: "invalid-email",
-      message: "Test message",
-    };
-    const errors = formValidations(formData);
-    expect(errors).toHaveProperty("email");
+  test("should accept emails with multiple subdomains", () => {
+    expect(validateEmail("user@sub.sub2.sub3.example.com")).toBe(true);
+  });
+
+  test("should reject emails with spaces", () => {
+    expect(validateEmail(" user@example.com")).toBe(false);
+    expect(validateEmail("user@example.com ")).toBe(false);
+    expect(validateEmail("user @example.com")).toBe(false);
+  });
+
+  test("should reject emails with multiple @ symbols", () => {
+    expect(validateEmail("user@@example.com")).toBe(false);
+    expect(validateEmail("user@name@example.com")).toBe(false);
+  });
+
+  test("should reject emails with problematic dots", () => {
+    expect(validateEmail("@example.com")).toBe(false);
+    expect(validateEmail("user@")).toBe(false);
+    expect(validateEmail("user@domain.com.")).toBe(false);
+    expect(validateEmail(".user@example.com")).toBe(false);
+    expect(validateEmail("user.@example.com")).toBe(false);
   });
 });

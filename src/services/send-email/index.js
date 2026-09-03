@@ -3,6 +3,10 @@ import { Resend } from "resend";
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export const sendEmail = async ({ firstName, lastName, email, message }) => {
+  if (!firstName || !lastName || !email || !message) {
+    throw new Error("All fields are required: firstName, lastName, email, message");
+  }
+
   try {
     const { error } = await resend.emails.send({
       from: "onboarding@resend.dev",

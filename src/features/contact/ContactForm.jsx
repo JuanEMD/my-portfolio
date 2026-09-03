@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { useTranslation } from "next-i18next/pages";
-import { formValidations } from "@/utils/validations";
+import { formValidations } from "./utils/validations";
 import Button from "../../components/common/button";
 import Textbox from "../../components/common/input/Textbox";
 import TextInput from "../../components/common/input/TextInput";

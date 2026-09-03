@@ -27,7 +27,7 @@ import '@testing-library/jest-dom'
   - Campos con espacios en blanco
   - Campos muy largos (boundary values)
 
-### 2.2 `src/context/ThemeContext.test.jsx` (nuevo)
+### 2.2 `src/context/ThemeContext.test.jsx` ✅
 **Tests para `toggleTheme`:**
 ```js
 describe("toggleTheme", () => {
@@ -46,7 +46,7 @@ describe("useTheme", () => {
 
 ## Fase 3: Tests de Hooks
 
-### 3.1 `src/features/contact/useContactForm.test.js` (nuevo)
+### 3.1 `src/features/contact/useContactForm.test.js` ✅
 **Mockear `fetch`:**
 ```js
 describe("handleSubmit", () => {
