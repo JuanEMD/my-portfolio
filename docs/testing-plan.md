@@ -106,7 +106,7 @@ describe("POST /api/contact", () => {
 
 ## Fase 5: Tests de Componentes (requiere setup de Fase 1)
 
-### 5.1 Componentes de Formulario
+### 5.1 Componentes de Formulario ✅
 **`src/features/contact/ContactForm.test.jsx`:**
 ```js
 describe("ContactForm", () => {
@@ -131,7 +131,7 @@ describe("ContactForm", () => {
 })
 ```
 
-### 5.2 Componentes de Modal
+### 5.2 Componentes de Modal ✅ 
 **`src/features/projects/ProjectModal.test.jsx`:**
 ```js
 describe("ProjectModal", () => {
