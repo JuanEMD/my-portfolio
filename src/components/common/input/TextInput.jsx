@@ -18,7 +18,7 @@ const TextInput = ({ label, id, name, value, type = 'text', onChange = () => und
                 {required && <span aria-hidden="true"> *</span>}
             </label>
             <input
-                id={id}
+                id={id || name}
                 name={name}
                 type={type}
                 value={value}

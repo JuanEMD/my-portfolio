@@ -18,7 +18,7 @@ const Textbox = ({ id, name, label, value, onChange = () => undefined, onBlur = 
                 {required && <span aria-hidden="true"> *</span>}
             </label>
             <textarea
-                id={id}
+                id={id || name}
                 name={name}
                 value={value}
                 onChange={handleOnChange}
