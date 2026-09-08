@@ -31,7 +31,7 @@ export default function Home() {
   return (
     <Layout>
       <main className={mainClasses}>
-        <SectionContainer className="pt-0!">
+        <SectionContainer id="personal-info" className="pt-0!">
           <PersonalInfo info={personalInfo} />
         </SectionContainer>
         <SectionContainer id="skills">
