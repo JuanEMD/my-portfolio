@@ -143,7 +143,7 @@ describe("ProjectModal", () => {
 })
 ```
 
-### 5.3 Componentes de Navegación
+### 5.3 Componentes de Navegación✅ 
 **`src/features/navbar/index.test.jsx`:**
 ```js
 describe("Navbar", () => {
@@ -153,7 +153,7 @@ describe("Navbar", () => {
 })
 ```
 
-### 5.4 Componentes Comunes
+### 5.4 Componentes Comunes ✅
 **`src/components/common/button/index.test.jsx`:**
 ```js
 describe("Button", () => {

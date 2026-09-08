@@ -6,7 +6,7 @@ const IconWithContainer = ({ icon, name, iconWidth = 20, iconHeight = 20 }) => {
 
     return (
         <div className={containerClasses}>
-            {!icon ? <Image src={icon} alt={name} width={iconWidth} height={iconHeight} /> : <div className="w-20 h-20 rounded-full bg-white" />}
+            {icon ? <Image src={icon} alt={name} width={iconWidth} height={iconHeight} /> : <div className="w-20 h-20 rounded-full bg-white" />}
         </div>
     )
 }
