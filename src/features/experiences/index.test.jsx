@@ -23,7 +23,7 @@ describe("Experiences", () => {
     cards.forEach((card, index) => {
       expect(card.className).toContain("experience-card");
       expect(card.className).toContain("opacity-0");
-      expect(card.style.animationDelay).toBe(`${index * 75}ms`);
+      expect(card.style.animationDelay).toBe(`${(index + 3) * 75}ms`);
     });
   });
 
