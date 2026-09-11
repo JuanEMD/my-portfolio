@@ -96,11 +96,11 @@ export const projects = [
 ];
 
 export const mainStack = [
-    { name: "MongoDB",  color: "#47A248", letter: "M" },
-    { name: "Express",  color: "#aaaaaa", letter: "Ex" },
-    { name: "React.js", color: "#61DAFB", letter: "⚛" },
-    { name: "Next.js",  color: "#d1d5db", letter: "▲" },
-    { name: "Node.js",  color: "#68A063", letter: "N" },
+  { name: "MongoDB", color: "#47A248", letter: "M" },
+  { name: "Express", color: "#aaaaaa", letter: "Ex" },
+  { name: "React.js", color: "#61DAFB", letter: "⚛" },
+  { name: "Next.js", color: "#d1d5db", letter: "▲" },
+  { name: "Node.js", color: "#68A063", letter: "N" },
 ];
 
 export const skills = {
@@ -120,7 +120,12 @@ export const skills = {
   databases: [{ name: "SQL Server" }, { name: "MongoDB" }],
   testing: [{ name: "Jest" }, { name: "Vitest" }, { name: "Playwright" }],
   cloud: [{ name: "Azure" }, { name: "AWS" }],
-  tools: [{ name: "Git" }, { name: "Postman" }, { name: "Opencode" }, { name: "Cursor" }],
+  tools: [
+    { name: "Git" },
+    { name: "Postman" },
+    { name: "Opencode" },
+    { name: "Cursor" },
+  ],
   Practices: [
     { name: "RESTful" },
     { name: "Agile" },
