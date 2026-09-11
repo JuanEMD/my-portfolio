@@ -87,4 +87,12 @@ describe("ProjectCard", () => {
     render(<ProjectCard project={project} />);
     expect(screen.queryByTestId("mock-project-modal")).not.toBeInTheDocument();
   });
+
+  test("merges the provided className and style into the card", () => {
+    const { container } = render(
+      <ProjectCard project={project} className="opacity-0 project-card" style={{ animationDelay: "75ms" }} />
+    );
+    expect(container.firstChild).toHaveClass("opacity-0", "project-card");
+    expect(container.firstChild).toHaveStyle({ animationDelay: "75ms" });
+  });
 });

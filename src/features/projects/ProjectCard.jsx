@@ -62,16 +62,16 @@ const ContentContainer = ({ title, description, skills, projectUrl, viewDetails,
     )
 }
 
-const ProjectCard = ({ project }) => {
+const ProjectCard = ({ id, project, className = "", style = {} }) => {
     const { title, description, highlightsKey, company, skills, imageUrl, projectUrl } = project;
     const { t } = useTranslation("translation");
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-    const cardClasses = 'grid sm:grid-cols-[1fr_2fr] gap-5 gap-5 rounded rounded-lg border border-gray-300 bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 p-4 dark:border-gray-700 divide-y sm:divide-y-0 sm:divide-x divide-gray-300 dark:divide-gray-700';
+    const cardClasses = `${className ? className + " " : ""}grid sm:grid-cols-[1fr_2fr] gap-5 gap-5 rounded rounded-lg border border-gray-300 bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 p-4 dark:border-gray-700 divide-y sm:divide-y-0 sm:divide-x divide-gray-300 dark:divide-gray-700`;
 
     return (
         <>
-            <div className={cardClasses}>
+            <div id={id} className={cardClasses} style={style}>
                 <ImageContainer
                     imageUrl={imageUrl}
                     notPublic1={t('projects.previewText.notPublic1')}

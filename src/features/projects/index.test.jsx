@@ -3,7 +3,7 @@ import { render, screen } from "@testing-library/react";
 import Projects from "./index";
 
 vi.mock("./ProjectCard", () => ({
-  default: () => <div data-testid="project-card" />,
+  default: ({ className, style }) => <div data-testid="project-card" className={className} style={style} />,
 }));
 
 const projects = [
@@ -15,6 +15,16 @@ describe("Projects", () => {
   test("renders one card per project", () => {
     render(<Projects projects={projects} />);
     expect(screen.getAllByTestId("project-card")).toHaveLength(2);
+  });
+
+  test("applies the reveal class and a staggered delay to each card", () => {
+    render(<Projects projects={projects} />);
+    const cards = screen.getAllByTestId("project-card");
+    cards.forEach((card, index) => {
+      expect(card.className).toContain("project-card");
+      expect(card.className).toContain("opacity-0");
+      expect(card.style.animationDelay).toBe(`${index * 75}ms`);
+    });
   });
 
   test("does not crash when projects is undefined", () => {

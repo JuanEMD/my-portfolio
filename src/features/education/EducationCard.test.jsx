@@ -34,4 +34,12 @@ describe("EducationCard", () => {
     render(<EducationCard education={education} />);
     expect(screen.getByText("countries.argentina")).toBeInTheDocument();
   });
+
+  test("merges the provided className and style into the card container", () => {
+    const { container } = render(
+      <EducationCard education={education} className="opacity-0 education-card" style={{ animationDelay: "75ms" }} />
+    );
+    expect(container.firstChild).toHaveClass("opacity-0", "education-card");
+    expect(container.firstChild).toHaveStyle({ animationDelay: "75ms" });
+  });
 });

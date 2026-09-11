@@ -6,7 +6,7 @@ import Textbox from "../../components/common/input/Textbox";
 import TextInput from "../../components/common/input/TextInput";
 import StatusMessage from "../../components/Message/StatusMessage";
 
-const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentState = {} }) => {
+const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentState = {}, className = "", style = {} }) => {
     const { t } = useTranslation("translation");
 
     const [firstName, setFirstName] = useState("");
@@ -51,11 +51,11 @@ const ContactForm = ({ onSubmit = () => undefined, isPending = false, currentSta
         onSubmit(formData, clearForm);
     };
 
-    const formClasses = "bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-7 flex flex-col gap-0 w-full max-w-2xl border border-gray-300 dark:border-gray-700";
+    const formClasses = `${className ? className + " " : ""}bg-linear-to-r from-slate-200 to-gray-100 dark:from-slate-800 dark:to-gray-900 rounded-lg p-7 flex flex-col gap-0 w-full max-w-2xl border border-gray-300 dark:border-gray-700`;
     const inputWrapperClasses = "grid";
 
     return (
-        <form onSubmit={handleOnSubmit} className={formClasses} aria-label="Contact form">
+        <form onSubmit={handleOnSubmit} className={formClasses} style={style} aria-label="Contact form">
             <div className="grid sm:grid-cols-2 gap-1 sm:gap-7">
                 <div className={inputWrapperClasses}>
                     <TextInput

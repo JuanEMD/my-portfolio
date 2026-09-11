@@ -34,4 +34,12 @@ describe("ExperienceCard", () => {
     render(<ExperienceCard experience={experience} />);
     expect(screen.getByText("experiences.frontend.description")).toBeInTheDocument();
   });
+
+  test("merges the provided className and style into the card container", () => {
+    const { container } = render(
+      <ExperienceCard experience={experience} className="opacity-0 experience-card" style={{ animationDelay: "75ms" }} />
+    );
+    expect(container.firstChild).toHaveClass("opacity-0", "experience-card");
+    expect(container.firstChild).toHaveStyle({ animationDelay: "75ms" });
+  });
 });
