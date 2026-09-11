@@ -19,7 +19,7 @@ describe("StackCard", () => {
   });
 
   test("applies the animation delay", () => {
-    const { container } = render(<StackCard name="React" color="#61dafb" letter="R" animationDelay="75ms" />);
+    const { container } = render(<StackCard name="React" color="#61dafb" letter="R" style={{ animationDelay: "75ms" }} />);
     expect(container.firstChild.getAttribute("style")).toContain("animation-delay: 75ms");
   });
 });
