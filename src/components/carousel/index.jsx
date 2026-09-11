@@ -13,13 +13,13 @@ const Element = ({ data }) => {
     )
 }
 
-const Carousel = ({ items }) => {
+const Carousel = ({ items, className = "", style = {} }) => {
 
     const carouselClass = "max-w-80 sm:max-w-130 md:max-w-160 lg:max-w-200 flex mt-10 mx-auto w-full overflow-x-hidden overflow-y-hidden p-5"
     const groupClass = `gap-5 animate-infinite-scroll pr-5 ${styles['carousel__group']} `
 
     return (
-        <div className={carouselClass}>
+        <div className={`${carouselClass} ${className}`} style={style}>
             <div className={groupClass}>
                 {items?.map((item) => {
                     return <Element key={item?.title} data={item} />

@@ -38,4 +38,12 @@ describe("Carousel", () => {
     render(<Carousel items={[]} />);
     expect(screen.queryAllByTestId("mock-image")).toHaveLength(0);
   });
+
+  test("forwards className and style to the container", () => {
+    const { container } = render(<Carousel items={items} className="opacity-0 carousel" style={{ animationDelay: "150ms" }} />);
+    const wrapper = container.querySelector(".carousel");
+    expect(wrapper).not.toBeNull();
+    expect(wrapper.className).toContain("opacity-0");
+    expect(wrapper.style.animationDelay).toBe("150ms");
+  });
 });

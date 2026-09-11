@@ -3,7 +3,7 @@ import EducationCard from "./EducationCard";
 import { DELAY_BASE } from "@/constants/animation";
 import { useAnimationObserver } from "@/hooks/useAnimationObserver";
 
-const targetAnimationElements = [{ element: "education-card", identificatorType: "class", animation: "animate-fade-right" }];
+const targetAnimationElements = [{ element: "education-card", identificatorType: "class", animation: "animate-fade-right" }, { element: "carousel", identificatorType: "class", animation: "animate-scale-in" }];
 
 const Education = ({ education, certificates }) => {
     useAnimationObserver({ targetElements: targetAnimationElements });
@@ -15,7 +15,7 @@ const Education = ({ education, certificates }) => {
                     <EducationCard key={index} education={e} className="opacity-0 education-card" style={{ animationDelay: `${(index + 3) * DELAY_BASE}ms` }} />
                 ))}
             </div>
-            <Carousel items={certificates} />
+            <Carousel items={certificates} className="opacity-0 carousel" style={{ animationDelay: `${3 * DELAY_BASE}ms` }} />
         </>
 
     )

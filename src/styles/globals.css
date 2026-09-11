@@ -59,7 +59,7 @@ html {
 @theme {
   --animate-fade-up: fadeUp 0.25s ease both;
   --animate-fade-right: fadeRight 0.25s ease both;
-  --animate-scale-in: scaleIn 0.25s ease;
+  --animate-scale-in: scaleIn 0.25s ease both;
 }
 
 @keyframes fadeUp {
