@@ -33,11 +33,6 @@ describe("Footer", () => {
     expect(screen.getByText("+54 11 1234 5678")).toBeInTheDocument();
   });
 
-  test("renders a mailto link", () => {
-    render(<Footer personalInfo={personalInfo} />);
-    expect(screen.getByRole("link", { name: "footer.sendEmail" })).toHaveAttribute("href", "mailto:ernesto@example.com");
-  });
-
   test("renders the LinkedIn link in a new tab", () => {
     render(<Footer personalInfo={personalInfo} />);
     const linkedin = screen.getByRole("link", { name: "footer.linkedinProfile" });

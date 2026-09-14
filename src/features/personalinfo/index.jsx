@@ -1,17 +1,28 @@
 import Image from "next/image";
 import { useTranslation } from "next-i18next/pages";
 import profilePhoto from "../../../public/images/jemd_formal_smile.png";
-import { targetAnimationElements } from "./const";
+import { DELAY_BASE } from "@/constants/animation";
 import Linkedin from "@/components/icons/Linkedin";
-import Mail from "@/components/icons/Mail";
 import Github from "@/components/icons/Github";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
 import { useAnimationObserver } from "@/hooks/useAnimationObserver";
-import { DELAY_BASE } from "@/constants/animation";
 
 const PersonalInfo = ({ className, info }) => {
     const { name, role, descriptionPart1, descriptionHighlight, descriptionPart2, mail, linkedinUrl, githubUrl } = info;
     const { t } = useTranslation("translation");
+
+    const targetAnimationElements = [
+        {
+            element: "profile-photo",
+            identificatorType: "id",
+            animation: "animate-fade-right",
+        },
+        { element: "linkedin", identificatorType: "id" },
+        { element: "github", identificatorType: "id" },
+        { element: "name", identificatorType: "id" },
+        { element: "role", identificatorType: "id" },
+        { element: "description", identificatorType: "id" },
+    ];
 
     useAnimationObserver({ targetElements: targetAnimationElements });
 
@@ -44,9 +55,6 @@ const PersonalInfo = ({ className, info }) => {
                     {t(descriptionPart2)}
                 </p>
                 <div className="flex gap-3">
-                    <LinkButtonWithIcon id="contact-me" url={`mailto:${mail}`} ariaLabel={t("personalInfo.contactMe")} className="opacity-0" style={{ animationDelay: `${DELAY_BASE}ms` }} >
-                        <Mail className="w-4 h-4 fill-icon" />
-                    </LinkButtonWithIcon>
                     <LinkButtonWithIcon id="linkedin" url={linkedinUrl} target="_blank" ariaLabel="LinkedIn" className="opacity-0" style={{ animationDelay: `${DELAY_BASE * 2}ms` }}>
                         <Linkedin className="w-4 h-4 fill-icon" />
                     </LinkButtonWithIcon>

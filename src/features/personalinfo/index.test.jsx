@@ -56,11 +56,6 @@ describe("PersonalInfo", () => {
     expect(image).toHaveAttribute("alt", "Profile picture");
   });
 
-  test("renders a contact me mailto link", () => {
-    render(<PersonalInfo info={info} />);
-    expect(screen.getByRole("link", { name: "personalInfo.contactMe" })).toHaveAttribute("href", "mailto:ernesto@example.com");
-  });
-
   test("renders the LinkedIn link in a new tab", () => {
     render(<PersonalInfo info={info} />);
     const linkedin = screen.getByRole("link", { name: "LinkedIn" });

@@ -20,11 +20,6 @@ const Footer = ({ personalInfo }) => {
                 </div>
                 <div className="flex gap-3">
                     <span>
-                        <LinkButtonWithIcon url={`mailto:${mail}`} ariaLabel={t("footer.sendEmail")}>
-                            <Mail className="w-4 h-4 fill-icon" />
-                        </LinkButtonWithIcon>
-                    </span>
-                    <span>
                         <LinkButtonWithIcon url={linkedinUrl} target="_blank" ariaLabel={t("footer.linkedinProfile")}>
                             <Linkedin className="w-4 h-4 fill-icon" />
                         </LinkButtonWithIcon >
