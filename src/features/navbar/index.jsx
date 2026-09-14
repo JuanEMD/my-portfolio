@@ -10,6 +10,8 @@ import ButtonWithIcon from "../../components/common/button/ButtonWithIcon";
 import HomeLink from "./HomeLink";
 import NavLink from "./NavLink";
 import ThemeToggle from "@/components/ThemeToggle.jsx";
+import { useAnimationObserver } from "@/hooks/useAnimationObserver";
+import { DELAY_BASE } from "@/constants/animation";
 
 const MenuIcon = () => (
     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
@@ -27,6 +29,15 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
     const { t } = useTranslation("translation");
     const [menuOpen, setMenuOpen] = useState(false);
 
+    const targetAnimationElements = [
+        { element: "navbar-home-link", identificatorType: "class" },
+        { element: "navbar-nav-link", identificatorType: "class" },
+        { element: "navbar-lang-button", identificatorType: "class" },
+        { element: "navbar-theme-toggle", identificatorType: "class" },
+    ];
+
+    useAnimationObserver({ targetElements: targetAnimationElements });
+
     const headerClasses = `${styles["navbar__scroll__border"]} px-3 py-3 sm:px-7 sm:py-4 sticky top-0 bg-gray-100 dark:bg-gray-800 rounded-2xl sm:rounded-lg z-10`;
 
     return (
@@ -43,16 +54,18 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
             <div className="hidden sm:flex items-center justify-between text-sm md:text-base">
                 <nav aria-label={t("nav.main")}>
                     {homeLink && (
-                        <HomeLink href={homeLink.href} label={t(homeLink.label)}>
-                            <Image src={Logo} alt={t(homeLink.label)} width={40} height={40} />
-                        </HomeLink>
+                        <div className="opacity-0 navbar-home-link">
+                            <HomeLink href={homeLink.href} label={t(homeLink.label)}>
+                                <Image src={Logo} alt={t(homeLink.label)} width={40} height={40} />
+                            </HomeLink>
+                        </div>
                     )}
                 </nav>
 
                 <nav className={`hidden sm:flex gap-2 items-center ${styles["navbar__links"]}`} aria-label={t("nav.sections")}>
                     <ul className="flex gap-2 items-center list-none p-0 m-0">
-                        {items.map((item) => (
-                            <li key={item.title}>
+                        {items.map((item, index) => (
+                            <li key={item.title} className="opacity-0 navbar-nav-link" style={{ animationDelay: `${index * DELAY_BASE}ms` }}>
                                 <NavLink href={item.href} label={t(item.label)}>
                                     {t(item.label)}
                                 </NavLink>
@@ -62,11 +75,15 @@ const Navbar = ({ homeLink = null, items = [], onLanguageChange, currentLanguage
                 </nav>
 
                 <div className="flex items-center gap-2">
-                    <ButtonWithIcon onClick={onLanguageChange} className="group" ariaLabel={t("nav.switchLanguage")}>
-                        <Languajes className="w-4 h-4 text-icon group-hover:hidden" />
-                        <span className="hidden group-hover:inline text-icon text-xs font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
-                    </ButtonWithIcon>
-                    <ThemeToggle />
+                    <div className="opacity-0 navbar-lang-button">
+                        <ButtonWithIcon onClick={onLanguageChange} className="group" ariaLabel={t("nav.switchLanguage")}>
+                            <Languajes className="w-4 h-4 text-icon group-hover:hidden" />
+                            <span className="hidden group-hover:inline text-icon text-xs font-bold uppercase" aria-hidden="true">{currentLanguage}</span>
+                        </ButtonWithIcon>
+                    </div>
+                    <div className="opacity-0 navbar-theme-toggle">
+                        <ThemeToggle />
+                    </div>
                 </div>
             </div>
 

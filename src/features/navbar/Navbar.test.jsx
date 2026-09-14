@@ -54,6 +54,42 @@ describe("Navbar", () => {
     });
   });
 
+  describe("scroll reveal animations", () => {
+    test("adds reveal class to the desktop home link", () => {
+      const { container } = render(<Navbar homeLink={homeLink} items={items} />);
+      const homeLinkEl = container.querySelector(".navbar-home-link");
+      expect(homeLinkEl.className).toContain("opacity-0");
+    });
+
+    test("adds reveal class and staggered delays to desktop nav links", () => {
+      const { container } = render(<Navbar items={items} />);
+      const links = container.querySelectorAll(".navbar-nav-link");
+      expect(links.length).toBe(2);
+      links.forEach((link, index) => {
+        expect(link.className).toContain("opacity-0");
+        expect(link.style.animationDelay).toBe(`${index * 75}ms`);
+      });
+    });
+
+    test("does not animate mobile nav links", () => {
+      const { container } = render(<Navbar items={items} />);
+      const mobileItems = container.querySelectorAll("#mobile-menu .navbar-nav-link");
+      expect(mobileItems.length).toBe(0);
+    });
+
+    test("adds reveal class to the language button", () => {
+      const { container } = render(<Navbar items={items} />);
+      const langButton = container.querySelector(".navbar-lang-button");
+      expect(langButton.className).toContain("opacity-0");
+    });
+
+    test("adds reveal class to the theme toggle", () => {
+      const { container } = render(<Navbar items={items} />);
+      const themeToggle = container.querySelector(".navbar-theme-toggle");
+      expect(themeToggle.className).toContain("opacity-0");
+    });
+  });
+
   describe("mobile menu", () => {
     test("is hidden by default", () => {
       render(<Navbar items={items} />);
