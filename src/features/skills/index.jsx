@@ -28,7 +28,7 @@ const Skills = ({ skills }) => {
             <div className={gridClasses}>
                 {mainStack.map((tech, i) => {
                     return (<StackCard
-                        key={tech.id}
+                        key={tech.name}
                         {...tech}
                         className="opacity-0 stack-skill-card"
                         style={{ animationDelay: `${i * DELAY_BASE}ms` }}
