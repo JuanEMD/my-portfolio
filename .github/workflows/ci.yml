@@ -1,0 +1,32 @@
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - name: Run checkout code
+        uses: actions/checkout@v6
+
+      - name: Setup pnpm
+        uses: pnpm/action-setup@v6
+        with:
+          version: 11
+          run_install: false
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint
+        run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test
+
+      - name: Build
+        run: pnpm build
