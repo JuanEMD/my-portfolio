@@ -5,6 +5,11 @@ import path from 'path'
 
 export default defineConfig({
   plugins: [react()],
+  esbuild: {
+    loader: 'jsx',
+    include: /(?:src|tests)\/.*\.jsx?$/,
+    exclude: [],
+  },
   resolve: {
     alias: {
       '@': path.resolve(__dirname, 'src'),
