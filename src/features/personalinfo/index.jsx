@@ -5,10 +5,11 @@ import { DELAY_BASE } from "@/constants/animation";
 import Linkedin from "@/components/icons/Linkedin";
 import Github from "@/components/icons/Github";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
+import PolymerCodeChip from "@/components/common/PolymerCodeChip";
 import { useAnimationObserver } from "@/hooks/useAnimationObserver";
 
 const PersonalInfo = ({ className, info }) => {
-    const { name, role, descriptionPart1, descriptionHighlight, descriptionPart2, mail, linkedinUrl, githubUrl } = info;
+    const { name, role, descriptionPart1, descriptionHighlight, descriptionPart2, mail, linkedinUrl, githubUrl, polymerCodeUrl } = info;
     const { t } = useTranslation("translation");
 
     const targetAnimationElements = [
@@ -19,6 +20,7 @@ const PersonalInfo = ({ className, info }) => {
         },
         { element: "linkedin", identificatorType: "id" },
         { element: "github", identificatorType: "id" },
+        { element: "polymercode", identificatorType: "id" },
         { element: "name", identificatorType: "id" },
         { element: "role", identificatorType: "id" },
         { element: "description", identificatorType: "id" },
@@ -61,6 +63,7 @@ const PersonalInfo = ({ className, info }) => {
                     <LinkButtonWithIcon id="github" url={githubUrl} target="_blank" ariaLabel="GitHub" className="opacity-0" style={{ animationDelay: `${DELAY_BASE * 3}ms` }}>
                         <Github className="w-4 h-4 fill-icon" />
                     </LinkButtonWithIcon>
+                    <PolymerCodeChip id="polymercode" url={polymerCodeUrl} ariaLabel={t("footer.polymerCodeWebsite")} className="opacity-0" style={{ animationDelay: `${DELAY_BASE * 4}ms` }} />
                 </div>
             </div>
         </div >

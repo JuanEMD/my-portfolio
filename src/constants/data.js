@@ -19,6 +19,7 @@ export const personalInfo = {
   linkedinUrl: "https://www.linkedin.com/in/jemarmolejos/",
   mail: "juanernestomarmolejosdanis@gmail.com",
   githubUrl: "https://github.com/JuanEMD",
+  polymerCodeUrl: "https://polymercode.com",
   phone: "+1 (809) 875 1370",
 };
 
@@ -148,6 +149,13 @@ export const skills = {
 };
 
 export const experiences = [
+  {
+    company: "PolymerCode",
+    position: "experiences.polymercode.position",
+    startDate: "2026",
+    endDate: "Presente",
+    description: "experiences.polymercode.description",
+  },
   {
     company: "Humano Seguros",
     position: "experiences.humano.position",

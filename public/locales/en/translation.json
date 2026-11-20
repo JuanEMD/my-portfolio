@@ -99,6 +99,10 @@
     }
   },
   "experiences": {
+    "polymercode": {
+      "position": "Founder / CTO",
+      "description": "I founded PolymerCode, a software development company specializing in web solutions, mobile apps, artificial intelligence, and automation. As CTO, I lead the technical architecture and development of custom digital products for clients across Latin America, the United States, and Europe."
+    },
     "humano": {
       "position": "Full Stack Engineer",
       "description": "Full stack development of internal business applications using Next.js, TypeScript, Redux, .NET, Tailwind CSS, and Material UI. Participated in architecture decisions and collaborated with cross-functional teams under Agile methodologies."
@@ -145,6 +149,7 @@
   "footer": {
     "sendEmail": "Send email",
     "linkedinProfile": "LinkedIn profile",
-    "githubProfile": "GitHub profile"
+    "githubProfile": "GitHub profile",
+    "polymerCodeWebsite": "PolymerCode website"
   }
 }

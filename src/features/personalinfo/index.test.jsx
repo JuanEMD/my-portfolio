@@ -19,6 +19,7 @@ vi.mock("next/link", () => ({
 vi.mock("@/components/icons/Linkedin", () => ({ default: () => null }));
 vi.mock("@/components/icons/Mail", () => ({ default: () => null }));
 vi.mock("@/components/icons/Github", () => ({ default: () => null }));
+vi.mock("@/components/icons/Website", () => ({ default: () => null }));
 
 const info = {
   name: "Ernesto",
@@ -29,6 +30,7 @@ const info = {
   mail: "ernesto@example.com",
   linkedinUrl: "https://linkedin.com/in/ernesto",
   githubUrl: "https://github.com/ernesto",
+  polymerCodeUrl: "https://polymercode.com",
 };
 
 describe("PersonalInfo", () => {
@@ -52,8 +54,10 @@ describe("PersonalInfo", () => {
 
   test("renders the profile picture with alt text", () => {
     render(<PersonalInfo info={info} />);
-    const image = screen.getByTestId("mock-image");
-    expect(image).toHaveAttribute("alt", "Profile picture");
+    const image = screen.getAllByTestId("mock-image").find(
+        (img) => img.getAttribute("alt") === "Profile picture"
+    );
+    expect(image).toHaveAttribute("src", "/public/images/jemd_formal_smile.png");
   });
 
   test("renders the LinkedIn link in a new tab", () => {
@@ -68,6 +72,13 @@ describe("PersonalInfo", () => {
     const github = screen.getByRole("link", { name: "GitHub" });
     expect(github).toHaveAttribute("href", "https://github.com/ernesto");
     expect(github).toHaveAttribute("target", "_blank");
+  });
+
+  test("renders the PolymerCode link in a new tab", () => {
+    render(<PersonalInfo info={info} />);
+    const polymercode = screen.getByRole("link", { name: "footer.polymerCodeWebsite" });
+    expect(polymercode).toHaveAttribute("href", "https://polymercode.com");
+    expect(polymercode).toHaveAttribute("target", "_blank");
   });
 
   test("applies custom className", () => {

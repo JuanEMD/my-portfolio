@@ -2,11 +2,12 @@ import { useTranslation } from "next-i18next/pages";
 import LinkButtonWithIcon from "@/components/common/button/LinkButtonWithIcon";
 import Github from "@/components/icons/Github";
 import Linkedin from "@/components/icons/Linkedin";
+import Website from "@/components/icons/Website";
 import Mail from "@/components/icons/Mail"
 import Phone from "@/components/icons/Phone";
 
 const Footer = ({ personalInfo }) => {
-    const { linkedinUrl, githubUrl, mail, phone } = personalInfo;
+    const { linkedinUrl, githubUrl, polymerCodeUrl, mail, phone } = personalInfo;
     const { t } = useTranslation("translation");
 
     const footerClasses = "p-4 my-10 mx-auto w-full";
@@ -27,6 +28,11 @@ const Footer = ({ personalInfo }) => {
                     <span>
                         <LinkButtonWithIcon url={githubUrl} target="_blank" ariaLabel={t("footer.githubProfile")}>
                             <Github className="w-4 h-4 fill-icon" />
+                        </LinkButtonWithIcon>
+                    </span>
+                    <span>
+                        <LinkButtonWithIcon url={polymerCodeUrl} target="_blank" ariaLabel={t("footer.polymerCodeWebsite")}>
+                            <Website className="w-4 h-4 stroke-icon" />
                         </LinkButtonWithIcon>
                     </span>
                 </div>

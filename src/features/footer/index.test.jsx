@@ -14,10 +14,12 @@ vi.mock("@/components/icons/Github", () => ({ default: () => null }));
 vi.mock("@/components/icons/Linkedin", () => ({ default: () => null }));
 vi.mock("@/components/icons/Mail", () => ({ default: () => null }));
 vi.mock("@/components/icons/Phone", () => ({ default: () => null }));
+vi.mock("@/components/icons/Website", () => ({ default: () => null }));
 
 const personalInfo = {
   linkedinUrl: "https://linkedin.com/in/ernesto",
   githubUrl: "https://github.com/ernesto",
+  polymerCodeUrl: "https://polymercode.com",
   mail: "ernesto@example.com",
   phone: "+54 11 1234 5678",
 };
@@ -45,5 +47,12 @@ describe("Footer", () => {
     const github = screen.getByRole("link", { name: "footer.githubProfile" });
     expect(github).toHaveAttribute("href", "https://github.com/ernesto");
     expect(github).toHaveAttribute("target", "_blank");
+  });
+
+  test("renders the PolymerCode link in a new tab", () => {
+    render(<Footer personalInfo={personalInfo} />);
+    const polymercode = screen.getByRole("link", { name: "footer.polymerCodeWebsite" });
+    expect(polymercode).toHaveAttribute("href", "https://polymercode.com");
+    expect(polymercode).toHaveAttribute("target", "_blank");
   });
 });
