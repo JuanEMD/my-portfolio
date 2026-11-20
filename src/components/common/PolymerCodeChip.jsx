@@ -25,7 +25,7 @@ const PolymerCodeChip = ({ url, id, ariaLabel, className, style }) => {
             `}
             style={style}
         >
-            <div className="relative w-5 h-5 rounded-full overflow-hidden flex-shrink-0">
+            <div className="relative w-5 h-5 rounded-full overflow-hidden flex-shrink-0 animate-header-logo-spin">
                 <Image
                     src={polymercodeLogo}
                     alt="PolymerCode"

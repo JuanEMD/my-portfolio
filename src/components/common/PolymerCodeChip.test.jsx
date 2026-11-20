@@ -31,6 +31,12 @@ describe("PolymerCodeChip", () => {
         expect(link.className).toContain("dark:hover:bg-gray-200");
     });
 
+    test("animates the logo with a left spin", () => {
+        render(<PolymerCodeChip {...defaultProps} />);
+        const logo = screen.getByTestId("polymercode-logo").parentElement;
+        expect(logo).toHaveClass("animate-header-logo-spin");
+    });
+
     test("renders a visible arrow stroked with a dark theme color", () => {
         const { container } = render(<PolymerCodeChip {...defaultProps} />);
         const arrow = container.querySelector("svg");

@@ -60,6 +60,7 @@ html {
   --animate-fade-up: fadeUp 0.25s ease both;
   --animate-fade-right: fadeRight 0.25s ease both;
   --animate-scale-in: scaleIn 0.25s ease both;
+  --animate-header-logo-spin: header-logo-spin 10s cubic-bezier(0.62, 0.05, 0.32, 1) infinite;
 }
 
 @keyframes fadeUp {
@@ -75,4 +76,17 @@ html {
 @keyframes scaleIn {
   from { opacity: 0; transform: scale(0.94) translateY(8px); }
   to   { opacity: 1; transform: scale(1)    translateY(0); }
+}
+
+/* Giro hacia la izquierda: 4 s de rotación dentro de un ciclo de 10 s */
+@keyframes header-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(-360deg);
+  }
 }
